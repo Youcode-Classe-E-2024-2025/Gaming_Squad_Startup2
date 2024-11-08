@@ -14,4 +14,4 @@
 - **Figma Brief:** [View on Figma](https://www.figma.com/design/WuHDx2K2kE2AyviiREzkqk/Untitled?node-id=10-185&t=mzOVUu3a7hKoG3wx-1)
 - **GitHub Repository:** [View on GitHub]
 - **Hosted Page:** [View Live]
-- **Color Palette:** [View Color Palette]
+- **Color Palette:** [View Color Palette](https://coolors.co/palette/2b2d42-8d99ae-edf2f4-ef233c-d90429)
