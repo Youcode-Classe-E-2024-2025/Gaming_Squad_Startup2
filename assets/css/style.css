@@ -697,9 +697,7 @@ video {
   margin-right: 20vw;
 }
 
-.mr-\[\] {
-  margin-right: ;
-}
+
 
 .mt-\[20vw\] {
   margin-top: 20vw;
@@ -1431,9 +1429,7 @@ video {
   color: px;
 }
 
-.text-\[\] {
-  color: ;
-}
+
 
 .text-\[\#fff\] {
   --tw-text-opacity: 1;
@@ -1446,7 +1442,7 @@ video {
 }
 
 .text-\[\#black\] {
-  color: #black;
+  color:#000;
 }
 
 .opacity-70 {
