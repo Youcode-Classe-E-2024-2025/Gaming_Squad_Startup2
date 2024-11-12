@@ -1,5 +1,8 @@
 /node_modules
 .vscode
-test.html
 
+test.html
 /assets/images/home_images
+
+assets\css\style.css
+

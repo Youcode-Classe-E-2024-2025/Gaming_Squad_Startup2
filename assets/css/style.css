@@ -708,6 +708,8 @@ video {
   margin-left: 10px;
 }
 
+
+
 .ml-\[17px\] {
   margin-left: 17px;
 }
@@ -1438,16 +1440,29 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+welcome_section
 .text-\[\] {
   color: ;
 }
+
+.text-\[px\] {
+  color: px;
+}
+
+
+main
 
 .text-\[2\.\] {
   color: 2.;
 }
 
+ welcome_section
 .text-\[2\.5\] {
   color: 2.5;
+
+.text-\[\#black\] {
+  color:#000;
+ main
 }
 
 .opacity-70 {
