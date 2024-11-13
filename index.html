@@ -96,17 +96,16 @@
             <div class="p-10">
                 <div
                     class="max-w-[66.5rem] h-[36.25rem] mx-auto relative rounded-2xl overflow-hidden  bg-white   text-white">
-                    <img src="./assets/images/home_images/wallpaper-manette-xbox.jpg" alt="xbox manette "
+                    <img id="wlcm-img" src="./assets/images/home_images/wallpaper-PS5-pro2.jpg" alt="xbox manette "
                         class="bg-left object-cover w-full h-full rounded-2xl">
 
                     <div
-                        class=" md:p-28 grid gap-4 items-center  grid-cols-2   absolute top-0 right-0 h-full w-full p-10 bg-gradient-to-r from-[#00000077] to-[#00000001]">
-                        <h1 class=" col-start-1 row-start-4 self-end col-span-full  font-bold text-[2.5rem]">Xbox Series
-                        </h1>
-                        <p class="  col-start-1 row-start-5 col-span-full font-normal text-2xl">Limited Edition <br>
-                            Stellar Shift Controller Available</p>
-                        <p class="md:pl-4  col-start-1 row-start-6 row-span-2 self-start col-span-full md:col-span-1">
-                            travel in space with your new controller
+                        class=" md:p-28 grid gap-4 items-center  grid-cols-2   absolute top-0 right-0 h-full w-full p-10 bg-gradient-to-r from-[#0000007e] to-[#00000011]">
+                        <h1 id="wlcm-title" class=" col-start-1 row-start-4 self-end col-span-full  font-bold text-[2.5rem]">PS5</h1>
+                        <p id="wlcm-sous-title" class="  col-start-1 row-start-5 col-span-full font-normal text-2xl">PLAY LIKE NEVER BEFORE</p>
+                        <p id="wlcm-content" class="md:pl-4  col-start-1 row-start-6 row-span-2 self-start col-span-full md:col-span-1">
+                            experience faster load times with an ultra-fast SSD, deeper immersion with haptic feedback1
+                            , audio1 , plus an exceptional catalog of PlayStation games
 
                         </p>
                         <button type="button"
@@ -171,14 +170,14 @@
             <h2 class="text-center font-semibold text-white text-5xl py-20 ">Best Products Selling</h2>
             <div>
                 <div class="relative ">
-                    <img src="./assets/images/home_images/wallpaper-manette-xbox.jpg" alt="xbox manette "
-                        class="bg-center object-cover w-full h-[35rem]  blur ">
+                    <img src="./assets/images/home_images/wallpaper-best-product.jpg" alt="xbox manette "
+                        class="bg-center object-cover w-full h-[35rem]  blur-[3px] ">
                     <div class="absolute max-w-[66.5rem] h-80 bottom-0 top-0 left-0 right-0 m-auto  ">
 
                         <div class="h-full w-full  relative">
 
                             <button type="button" id="left-carousel-btn"
-                                class="bg-[#ffffff10] hover:bg-[#ffffff30] absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 rounded-full z-20 p-2">
+                                class="bg-[#ffffff10] hover:bg-[#ffffff30] absolute top-1/2 left-0 -translate-y-1/2   rounded-full z-20 p-2">
                                 <svg class="fill-white size-6 " xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 320 512">
                                     <path
@@ -186,15 +185,15 @@
                                 </svg>
                             </button>
                             <button type="button" id="right-carousel-btn"
-                                class="bg-[#ffffff10] hover:bg-[#ffffff30] absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 rounded-full z-20 p-2">
+                                class="bg-[#ffffff10] hover:bg-[#ffffff30] absolute right-0 top-1/2 -translate-y-1/2   rounded-full z-20 p-2">
                                 <svg class="fill-white size-6 " xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 320 512">
                                     <path
                                         d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
                                 </svg>
                             </button>
-                            <div class="mx-auto w-[55rem] h-full    overflow-x-hidden">
-                                <div class="flex items-center w-fit  justify-between gap-32">
+                            <div id="carousel-container" class=" mx-auto max-w-[55rem] h-full   overflow-x-hidden overflow-y-hidden  ">
+                                <div id="carousel-content" class="  flex items-center w-fit  justify-center gap-32">
                                     <div
                                         class="cartCarousel  h-[19.5rem] w-52 bg-[#4E6896] hover:bg-[#3E5377] rounded-lg rounded-b-3xl  text-white flex flex-col items-center justify-between overflow-hidden">
                                         <div class=" text-center flex flex-col h-full items-center justify-between p-1">
@@ -399,7 +398,7 @@
                                     <p class="font-bold text-xl">+212 0000000000</p>
                                 </div>
                             </div>
-                            <div class="row-start-2 col-start-2 col-span-3 text-white">
+                            <div class="row-start-2 col-start-2 col-span-3 text-black">
                                 <form action="" class="flex flex-col gap-4">
                                     <div class="flex  w-full gap-3">
                                         <input class="w-1/2 rounded-lg text-[0.75rem] p-3 " type="text"
@@ -419,7 +418,7 @@
                                         <textarea class=" w-full rounded-lg h-28 text-[0.75rem] p-3  " name="" id=""
                                             placeholder="message"></textarea>
                                     </div>
-                                    <button class="   self-center rounded-lg bg-orange py-4 px-14"
+                                    <button class=" text-white  self-center rounded-lg bg-orange py-4 px-14"
                                         type="button">send</button>
                                 </form>
                             </div>
