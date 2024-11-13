@@ -12,6 +12,8 @@ if (signUpLink && signInLink) {
         e.preventDefault();
         document.querySelector('.sign-in').style.transform = 'translateY(0)';
         document.querySelector('.sign-up').style.transform = 'translateY(100%)';
+
+        
     });
 }
        
