@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,79 +8,345 @@
     <!-- font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <title>Document</title>
 </head>
 <body class=" font-primary bg-dark">
-    <header>
- 
+    <header class="fixed z-20 top-0 right-0 w-full">
+
         <nav class="bg-white h-24">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-6 py-10">
-              <a href="#" class=" text-black font-logo text-4xl">
-                  
-                  Game<span class="text-red">Rig</span>
-              </a>
-              <button type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-gray-200   " aria-controls="navbar-default" aria-expanded="false">
-                  <span class="sr-only">Open main menu</span>
-                  <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                  </svg>
-              </button>
-              <!-- hidden -->
-              <div class=" hidden w-full md:block md:w-auto" id="navbar-default">
-                <ul class="font-medium flex flex-col   items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
-                  <li class=" w-full md:w-auto">
-                    <a href="#" class="block py-2 px-3 text-white  rounded md:bg-transparent md:text-red md:font-semibold text-[1.25rem]  md:p-0  hover:scale-[1.01] md:hover:scale-110 transition-transform" aria-current="page">Home</a>
-                  </li>
-                  <li  class=" w-full md:w-auto">
-                    <a href="./assets/pages/products/products.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  hover:scale-[1.01] md:hover:scale-110 transition-transform md:hover:text-red md:p-0  ">Products</a>
-                  </li>
-                  <li  class=" w-full md:w-auto">
-                    <a href="#contact" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  hover:scale-[1.01] md:hover:scale-110 transition-transform md:hover:text-red md:p-0  ">Contact Us</a>
-                  </li>
-                  <li  class=" w-full md:w-auto">
-                    <a href="#about" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  hover:scale-[1.01] md:hover:scale-110 transition-transform md:hover:text-red md:p-0  ">About Us</a>
-                  </li>
-                  <li class="flex justify-around w-full md:w-auto md:gap-8 md:justify-center ">
-                    <a role="button" href="./assets/pages/cart/cart.html" class="hover:scale-110 transition-all">
-                        <span class="sr-only">go to cart </span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                        </svg>
-                          
-                    </a>
+                <a href="#" class=" text-black font-logo text-4xl">
 
-                    <a role="button" href="./assets/pages/cart/cart.html"  class="hover:scale-110 transition-all">
-                        <span class="sr-only">login</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
-                        </svg>
-                      
-                          
-                    </a>
+                    Game<span class="text-red">Rig</span>
+                </a>
+                <button id="burger-icon" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-rose-200 focus:outline-none focus:ring-2 focus:ring-roce-200   "
+                    aria-controls="navbar-default" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+                <!-- hidden -->
+                <div class=" hidden w-full md:block md:w-auto" id="navbar-default">
+                    <ul
+                        class="font-medium flex flex-col   items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+                        <li class=" w-full md:w-auto">
+                            <a href="#"
+                                class="block py-2 px-3 text-white bg-red rounded md:bg-transparent md:text-red md:font-semibold text-[1.25rem]  md:p-0  hover:scale-[1.01] md:hover:scale-110 transition-transform"
+                                aria-current="page">Home</a>
+                        </li>
+                        <li class=" w-full md:w-auto">
+                            <a href="./assets/pages/products/products.html"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  hover:scale-[1.01] md:hover:scale-110 transition-transform md:hover:text-red md:p-0  ">Products</a>
+                        </li>
+                        <li class=" w-full md:w-auto">
+                            <a href="#contact"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  hover:scale-[1.01] md:hover:scale-110 transition-transform md:hover:text-red md:p-0  ">Contact
+                                Us</a>
+                        </li>
+                        <li class=" w-full md:w-auto">
+                            <a href="#about"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  hover:scale-[1.01] md:hover:scale-110 transition-transform md:hover:text-red md:p-0  ">About
+                                Us</a>
+                        </li>
+                        <li class="flex justify-around w-full md:w-auto md:gap-8 md:justify-center ">
+                            <a role="button" href="./assets/pages/cart/cart.html"
+                                class="hover:scale-110 transition-all">
+                                <span class="sr-only">go to cart </span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-8">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                </svg>
 
-                  </li>
-                   
-                </ul>
-              
-              </div>
-              
+                            </a>
+
+                            <a role="button" href="./assets/pages/cart/cart.html"
+                                class="hover:scale-110 transition-all">
+                                <span class="sr-only">login</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-8">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+                                </svg>
+
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
             </div>
         </nav>
- 
+
     </header>
-    <main >
-        <section id="welcome" ></section>
-        <section id="best-product" ></section>
-        <section id="category" ></section>
-        <section id="about" ></section>
-        <section id="contact" ></section>
+    <main class="mt-24">
+        <section id="welcome">
+            <!-- 1 -->
+            <div class="p-10">
+                <div
+                    class="max-w-[66.5rem] h-[36.25rem] mx-auto relative rounded-2xl overflow-hidden  bg-white   text-white">
+                    <img src="./assets/images/home_images/wallpaper-manette-xbox.jpg" alt="xbox manette "
+                        class="bg-left object-cover w-full h-full rounded-2xl">
+              
+                    <div
+                        class=" md:p-28 grid gap-4 items-center  grid-cols-2   absolute top-0 right-0 h-full w-full p-10 bg-gradient-to-r from-[#00000077] to-[#00000001]">
+                        <h1 class=" col-start-1 row-start-4 self-end col-span-full  font-bold text-[2.5rem]">Xbox Series</h1>
+                        <p class="  col-start-1 row-start-5 col-span-full font-normal text-2xl">Limited Edition <br>
+                            Stellar Shift Controller Available</p>
+                        <p class="md:pl-4  col-start-1 row-start-6 row-span-2 self-start col-span-full md:col-span-1">
+                            travel in space with your new controller
+                           
+                        </p>
+                        <button type="button"
+                            class="col-start-1  row-start-8 col-span-full px-4 py-2 w-fit rounded-lg border-2 border-white hover:bg-orange hover:scale-105  bg-dark ">more
+                            details </button>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="p-10">
+          
+                <div
+                    class="max-w-[66.5rem] h-[36.25rem] mx-auto relative rounded-2xl overflow-hidden  bg-white   text-white">
+                    <img src="./assets/images/home_images/wallpaper-PS5-pro2.jpg" alt="PS5 "
+                        class="bg-left object-cover w-full h-full rounded-2xl">
+              
+                    <div
+                        class=" md:p-28  grid gap-4 items-center  grid-cols-2   absolute top-0 right-0 h-full w-full p-10 bg-gradient-to-r from-[#00000077] to-[#00000001]">
+                        <h1 class=" col-start-1 row-start-4 self-end col-span-full  font-bold text-[2.5rem]">PS5</h1>
+                        <p class="  col-start-1 row-start-5 col-span-full font-normal text-2xl">PLAY LIKE NEVER BEFORE</p>
+                        <p class="md:pl-4  col-start-1 row-start-6 row-span-2 self-start col-span-full md:col-span-1">
+                            experience faster load times with an ultra-fast SSD, deeper immersion with haptic feedback1 , audio1 , plus an exceptional catalog of PlayStation games
+                           
+                        </p>
+                        <button type="button"
+                            class="col-start-1  row-start-8 col-span-full px-4 py-2 w-fit rounded-lg border-2 border-white hover:bg-orange hover:scale-105  bg-dark ">more
+                            details </button>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="p-10">
+          
+                <div
+                    class="max-w-[66.5rem] h-[36.25rem] mx-auto relative rounded-2xl overflow-hidden  bg-white   text-white">
+                    <img src="./assets/images/home_images/offresWallpaper.jpg" alt="xbox manette "
+                        class="bg-left object-cover w-full h-full rounded-2xl">
+              
+                    <div
+                        class=" md:p-28 grid gap-4 items-center  grid-cols-2   absolute top-0 right-0 h-full w-full p-10 bg-gradient-to-r from-[#00000077] to-[#00000001]">
+                        <h1 class=" col-start-1 row-start-4 self-end col-span-full  font-bold text-[2.5rem]"> New Offres</h1>
+                        <p class="  col-start-1 row-start-5 col-span-full font-normal text-2xl"> Discover new offres </p>
+                        <p class="md:pl-4   col-start-1 row-start-6 row-span-2 self-start col-span-full md:col-span-1">
+                            Level up your game with our epic new offers , gear, gadgets, and gaming goodness!
+                           
+                        </p>
+                        <button type="button"
+                            class="col-start-1  row-start-8 col-span-full px-4 py-2 w-fit rounded-lg border-2 border-white hover:bg-orange hover:scale-105  bg-dark ">more
+                            details </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="best-product">
+            <div>
+                <div class="relative ">
+                    <img src="./assets/images/home_images/wallpaper-manette-xbox.jpg" alt="xbox manette "
+                    class="bg-center object-cover w-full h-[35rem]  blur "> 
+                    <div class="absolute max-w-[66.5rem] h-80 bottom-0 top-0 left-0 right-0 m-auto  ">
+
+                        <div class="h-full w-full  relative">
+
+                        <button type="button" id="left-carousel-btn" class="bg-[#ffffff10] hover:bg-[#ffffff30] absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 rounded-full z-20 p-2">
+                            <svg class="fill-white size-6 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"> <path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>  
+                        </button>
+                        <button type="button" id="right-carousel-btn" class="bg-[#ffffff10] hover:bg-[#ffffff30] absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 rounded-full z-20 p-2">
+                            <svg class="fill-white size-6 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"> <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+                        </button>
+                        <div class="mx-auto w-[55rem] h-full    overflow-x-hidden" >
+                            <div class="flex items-center w-fit  justify-between gap-32">
+                                <div class="cartCarousel  h-[19.5rem] w-52 bg-[#4E6896] hover:bg-[#3E5377] rounded-lg rounded-b-3xl  text-white flex flex-col items-center justify-between overflow-hidden">
+                                    <div class=" text-center flex flex-col h-full items-center justify-between p-1">
+                                        <div class=" h-52 w-full">
+                                        <img src="./assets/images/home_images/wallpaper-manette-xbox.jpg" alt="xbox manette " class=" object-cover h-full w-full rounded ">
+                                        </div>
+                                      
+                                            <p>products name</p>
+                                            <p class=" w-24 rounded-full  bg-[#ffffff10] mx-auto">100$</p>
+                                        </div>
+                                        <button class="bg-[#2B2D42] h-8 w-full">add</button>
+                                         
+                                </div>
+                                <div class="cartCarousel  h-[19.5rem] w-52 bg-[#4E6896] hover:bg-[#3E5377] rounded-lg rounded-b-3xl  text-white flex flex-col items-center justify-between overflow-hidden">
+                                    <div class=" text-center flex flex-col h-full items-center justify-between p-1">
+                                        <div class=" h-52 w-full">
+                                        <img src="./assets/images/home_images/wallpaper-manette-xbox.jpg" alt="xbox manette " class=" object-cover h-full w-full rounded ">
+                                        </div>
+                                      
+                                            <p>products name</p>
+                                            <p class=" w-24 rounded-full  bg-[#ffffff10] mx-auto">100$</p>
+                                        </div>
+                                        <button class="bg-[#2B2D42] h-8 w-full">add</button>
+                                    
+                                </div>
+                                <div class="cartCarousel  h-[19.5rem] w-52 bg-[#4E6896] hover:bg-[#3E5377] rounded-lg rounded-b-3xl  text-white flex flex-col items-center justify-between overflow-hidden">
+                                    <div class=" text-center flex flex-col h-full items-center justify-between p-1">
+                                        <div class=" h-52 w-full">
+                                        <img src="./assets/images/home_images/wallpaper-manette-xbox.jpg" alt="xbox manette " class=" object-cover h-full w-full rounded ">
+                                        </div>
+                                      
+                                            <p>products name</p>
+                                            <p class=" w-24 rounded-full  bg-[#ffffff10] mx-auto">100$</p>
+                                        </div>
+                                        <button class="bg-[#2B2D42] h-8 w-full">add</button>
+                                    
+                                </div>
+                                <div class="cartCarousel  h-[19.5rem] w-52 bg-[#4E6896] hover:bg-[#3E5377] rounded-lg rounded-b-3xl  text-white flex flex-col items-center justify-between overflow-hidden">
+                                    <div class=" text-center flex flex-col h-full items-center justify-between p-1">
+                                        <div class=" h-52 w-full">
+                                        <img src="./assets/images/home_images/wallpaper-manette-xbox.jpg" alt="xbox manette " class=" object-cover h-full w-full rounded ">
+                                        </div>
+                                      
+                                            <p>products name</p>
+                                            <p class=" w-24 rounded-full  bg-[#ffffff10] mx-auto">100$</p>
+                                        </div>
+                                        <button class="bg-[#2B2D42] h-8 w-full">add</button>
+                                    
+                                </div>
+                                <div class="cartCarousel  h-[19.5rem] w-52 bg-[#4E6896] hover:bg-[#3E5377] rounded-lg rounded-b-3xl  text-white flex flex-col items-center justify-between overflow-hidden">
+                                    <div class=" text-center flex flex-col h-full items-center justify-between p-1">
+                                        <div class=" h-52 w-full">
+                                        <img src="./assets/images/home_images/wallpaper-manette-xbox.jpg" alt="xbox manette " class=" object-cover h-full w-full rounded ">
+                                        </div>
+                                      
+                                            <p>products name</p>
+                                            <p class=" w-24 rounded-full  bg-[#ffffff10] mx-auto">100$</p>
+                                        </div>
+                                        <button class="bg-[#2B2D42] h-8 w-full">add</button>
+                                    
+                                </div>
+                                <div class="cartCarousel  h-[19.5rem] w-52 bg-[#4E6896] hover:bg-[#3E5377] rounded-lg rounded-b-3xl  text-white flex flex-col items-center justify-between overflow-hidden">
+                                    <div class=" text-center flex flex-col h-full items-center justify-between p-1">
+                                        <div class=" h-52 w-full">
+                                        <img src="./assets/images/home_images/wallpaper-manette-xbox.jpg" alt="xbox manette " class=" object-cover h-full w-full rounded ">
+                                        </div>
+                                      
+                                            <p>products name</p>
+                                            <p class=" w-24 rounded-full  bg-[#ffffff10] mx-auto">100$</p>
+                                        </div>
+                                        <button class="bg-[#2B2D42] h-8 w-full">add</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="category"></section>
+<!-- <<<<<<< contact_section -->
+<!--         <section id="about"></section> -->
+            <section id="about">
+            <div>
+                <div class="relative ">
+                    <img src="./assets/images/home_images/offresWallpaper.jpg" alt="xbox manette "
+                    class="bg-center object-cover w-full h-[39.125rem]   "> 
+                    <div class="absolute max-w-[66.5rem] h-[35rem] bottom-0 top-0 left-0 right-0 m-auto backdrop-blur-md rounded-2xl   ">
+                        <div class="grid grid-cols-10 h-full items-center gap-4 p-11">
+                            <div class="col-start-1 col-span-5 h-[29.5rem]">
+                                <img src="./assets/images/home_images/grp-gmrs.jpg" alt="xbox manette "
+                                     class="bg-center object-cover w-full h-full rounded-lg ">
+                            </div>
+                            <div class="row-start-1 col-start-7 col-span-4 text-white">
+                                <p class="mb-6">Welcome to GAMERIG, your ultimate destination for all 
+                                    things gaming! Whether you’re a casual gamer,
+                                    a competitive player, or a gaming enthusiast, 
+                                    we’ve got you covered with a wide selection of 
+                                    high-performance products to enhance your gaming experience.
+                                </p>
+                                <p> Our mission is simple: to deliver the best gaming products and expert advice, 
+                                    all in one place. Whether you're upgrading your setup, starting fresh, or looking
+                                     for the perfect gift for a fellow gamer, GAMERIG is here to help you level up.
+                                     Explore our store today and discover the gear you need to take your gaming 
+                                     to the next level. Game on!
+                                </p>
+                            </div>
+<!-- >>>>>>> main -->
+                        </div>
+        
+                    </div>
+        
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div>
+                <div class="relative ">
+                    <img src="./assets/images/home_images/bg_contact.jpg" alt="xbox manette "
+                    class="bg-center object-cover w-full h-[39.125rem]   "> 
+                    <div class="absolute max-w-[66.5rem] h-[35rem] bottom-0 top-0 left-0 right-0 m-auto backdrop-blur-md rounded-2xl   ">
+                        <div class="grid grid-cols-10 h-full items-center gap-4 py-11">
+                            <div class="row-start-1 col-span-full flex justify-around text-white">
+                                <div class="flex gap-4" >
+                                    <svg data-slot="icon" fill="none" class="size-8" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z"></path>
+                                  </svg>
+                                    <p class="font-bold text-xl">support@gamerig.com</p>
+                                </div>
+                                <div class="flex gap-4">
+                                    <svg data-slot="icon" fill="none" class="size-8" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"></path>
+                                      </svg>
+                                      <p class="font-bold text-xl">+212 0000000000</p>
+                                </div>
+                            </div> 
+                            <div class="row-start-2 col-start-2 col-span-3 text-white">
+                                <form action="" class="flex flex-col gap-4">
+                                    <div class="flex  w-full gap-3">
+                                        <input class="w-1/2 rounded-lg text-[0.75rem] p-3 " type="text" placeholder="firstName"> <input class="w-1/2 rounded-lg text-[0.75rem] p-3  " type="text" placeholder="lastName">
+                                    </div>
+                                    <div>
+                                        <input class=" w-full rounded-lg text-[0.75rem] p-3 " type="email" placeholder="email">
+                                    </div>
+                                    <div>
+                                        <input class=" w-full rounded-lg text-[0.75rem] p-3 " type="text" placeholder="subject">
+                                    </div>
+                                    <div>
+                                        <textarea class=" w-full rounded-lg h-28 text-[0.75rem] p-3  " name="" id="" placeholder="message"></textarea>
+                                    </div>
+                                    <button class="   self-center rounded-lg bg-orange py-4 px-14" type="button">send</button>
+                                </form>
+                            </div>
+                            <div class="row-start-2 col-start-6 col-span-4 h-[22rem]">
+                                <img src="./assets/images/home_images/contactus.jpg" alt="xbox manette "
+                                     class="bg-center object-cover w-full h-full rounded-lg ">
+                            </div>
+                            
+ 
     </main>
     <footer class="bg-black">
         <div class="max-w-screen-xl mx-auto px-6 py-10">
             <div class="logo my-4">
                 <a href="./index.html" class=" text-white font-logo text-4xl">
-                      
+
                     Game<span class="text-red">Rig</span>
                 </a>
             </div>
@@ -105,36 +372,55 @@
                 <div>
                     <h3 class="my-2 text-orange font-semibold text-xl">join us</h3>
                     <ul class="ml-4">
-                        <li class="hover:scale-105 hover:text-orange"><a href="">log in</a></li> 
+                        <li class="hover:scale-105 hover:text-orange"><a href="">log in</a></li>
                         <li class="hover:scale-105 hover:text-orange"><a href="">sign in</a></li>
                         <li class="hover:scale-x-105">
-                           <div  class="relative flex items-center w-full h-10 border-2 border-x-white rounded-full  focus-within:shadow-lg bg-transparent overflow-hidden my-4">
-                            <label class="sr-only" for="footerSearchBar">search bar </label>
-                            <input placeholder="search" 
-                            class="peer h-full w-full outline-none bg-transparent text-sm text-white px-4" 
-                            type="search" name="footerSearchBar" id="footerSearchBar">
-                            <div class="grid place-items-center h-full w-12 text-gray-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                                </svg>
+                            <div
+                                class="relative flex items-center w-full h-10 border-2 border-x-white rounded-full  focus-within:shadow-lg bg-transparent overflow-hidden my-4">
+                                <label class="sr-only" for="footerSearchBar">search bar </label>
+                                <input placeholder="search"
+                                    class="peer h-full w-full outline-none bg-transparent text-sm text-white px-4"
+                                    type="search" name="footerSearchBar" id="footerSearchBar">
+                                <div class="grid place-items-center h-full w-12 text-gray-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                    </svg>
+                                </div>
                             </div>
-                           </div>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class=" mt-10 flex justify-center items-center gap-10">
                 <div>
-                    <svg class="fill-gray-300 hover:fill-orange hover:scale-105 w-6"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+                    <svg class="fill-gray-300 hover:fill-orange hover:scale-105 w-6" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path
+                            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+                    </svg>
                 </div>
                 <div>
-                    <svg class="fill-gray-300 hover:fill-orange hover:scale-105 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                    <svg class="fill-gray-300 hover:fill-orange hover:scale-105 w-6" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <path
+                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                    </svg>
                 </div>
                 <div>
-                    <svg class="fill-gray-300 hover:fill-orange hover:scale-105 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg>
+                    <svg class="fill-gray-300 hover:fill-orange hover:scale-105 w-6" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 576 512">
+                        <path
+                            d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
+                    </svg>
                 </div>
                 <div>
-                    <svg class="fill-gray-300 hover:fill-orange hover:scale-105 w-6"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+                    <svg class="fill-gray-300 hover:fill-orange hover:scale-105 w-6" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <path
+                            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                    </svg>
                 </div>
 
             </div>
