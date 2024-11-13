@@ -64,12 +64,42 @@ function getFormData() {
 
 window.AddProduct = function (event) {
 	event.preventDefault();
+
 	const newProduct = getFormData();
-	products.push(newProduct);
-	updateLocalStorage();
-	displayProducts(products);
-	closeForm();
+	const isDataValid = validateData();
+	if (isDataValid) {
+		products.push(newProduct);
+		updateLocalStorage();
+		displayProducts(products);
+		closeForm();
+	}
 };
+
+function validateData(event) {
+	const name = document.getElementById("name").value.trim();
+	const description = document.getElementById("description").value.trim();
+	const price = document.getElementById("price").value.trim();
+	const rating = document.getElementById("rating").value.trim();
+	const image = document.getElementById("image").value.trim();
+	let errorMessage = "";
+
+	if (name === "") {
+		errorMessage = "Please enter the product name.";
+	} else if (description === "") {
+		errorMessage = "Please enter the product description.";
+	} else if (price === "" || isNaN(price) || parseFloat(price) <= 0) {
+		errorMessage = "Please enter a valid price (greater than 0).";
+	} else if (rating === "" || isNaN(rating) || parseFloat(rating) < 0 || parseFloat(rating) > 5) {
+		errorMessage = "Please Enter a valid number in this range [0, 5].";
+	} else if (image === "" || !/^https?:\/\/.+/i.test(image)) {
+		errorMessage = "Please enter a valid image link.";
+	}
+
+	if (errorMessage) {
+		alert(errorMessage);
+		return false;
+	} else return true;
+}
 
 window.deleteProduct = function (event, element) {
 	event.stopPropagation();
