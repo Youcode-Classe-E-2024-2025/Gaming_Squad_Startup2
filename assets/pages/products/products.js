@@ -11,13 +11,21 @@ function updateLocalStorage() {
 	localStorage.setItem("products", JSON.stringify(products));
 }
 
+function shuffle(array) {
+	for (let i = array.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1)); // Générer un index aléatoire
+		[array[i], array[j]] = [array[j], array[i]]; // Échanger les éléments
+	}
+	return array;
+}
+
 fetch("../../data/data.json")
 	.then((res) => res.json())
 	.then((data) => {
 		if (localStorage.getItem("products")) {
 			products = JSON.parse(localStorage.getItem("products"));
 		} else {
-			products = data;
+			products = shuffle(data);
 			updateLocalStorage();
 		}
 		displayProducts(products);
