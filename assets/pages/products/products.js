@@ -70,3 +70,12 @@ window.AddProduct = function (event) {
 	displayProducts(products);
 	closeForm();
 };
+
+window.deleteProduct = function (event, element) {
+	event.stopPropagation();
+	const id = element.dataset.id;
+	const index = products.findIndex((product) => product.id == id);
+	products.splice(index, 1);
+	displayProducts(products);
+	updateLocalStorage();
+};
