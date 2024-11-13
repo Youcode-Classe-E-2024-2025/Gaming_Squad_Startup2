@@ -1,0 +1,293 @@
+[
+	{
+		"id": 1,
+		"name": "Predator Gaming PC",
+		"description": "High-performance gaming PC with RTX 3080",
+		"imgSrc": "",
+		"rating": 5,
+		"price": 1500,
+		"category": "PC Gamer"
+	},
+	{
+		"id": 2,
+		"name": "Alienware Gaming PC",
+		"description": "Premium gaming PC with AMD Ryzen 9",
+		"imgSrc": "",
+		"rating": 5,
+		"price": 1800,
+		"category": "PC Gamer"
+	},
+	{
+		"id": 3,
+		"name": "MSI Gaming PC",
+		"description": "MSI gaming PC for intense gameplay",
+		"imgSrc": "",
+		"rating": 4,
+		"price": 1400,
+		"category": "PC Gamer"
+	},
+	{
+		"id": 4,
+		"name": "Asus ROG Gaming PC",
+		"description": "Asus ROG Strix PC with Intel i9",
+		"imgSrc": "",
+		"rating": 5,
+		"price": 1600,
+		"category": "PC Gamer"
+	},
+	{
+		"id": 5,
+		"name": "HP Omen Gaming PC",
+		"description": "HP Omen with RTX 3060",
+		"imgSrc": "",
+		"rating": 4,
+		"price": 1300,
+		"category": "PC Gamer"
+	},
+	{
+		"id": 6,
+		"name": "Lenovo Legion Gaming PC",
+		"description": "Lenovo Legion with AMD Ryzen 7",
+		"imgSrc": "",
+		"rating": 4,
+		"price": 1250,
+		"category": "PC Gamer"
+	},
+	{
+		"id": 7,
+		"name": "Dell G5 Gaming PC",
+		"description": "Dell G5 with Intel i7 and GTX 1660",
+		"imgSrc": "",
+		"rating": 4,
+		"price": 1100,
+		"category": "PC Gamer"
+	},
+	{
+		"id": 8,
+		"name": "Corsair One Gaming PC",
+		"description": "Compact PC with liquid cooling",
+		"imgSrc": "",
+		"rating": 5,
+		"price": 2000,
+		"category": "PC Gamer"
+	},
+
+	{
+		"id": 9,
+		"name": "Logitech G502 Mouse",
+		"description": "Gaming mouse with HERO sensor",
+		"imgSrc": "",
+		"rating": 5,
+		"price": 60,
+		"category": "Accessories"
+	},
+	{
+		"id": 10,
+		"name": "HyperX Cloud II Headset",
+		"description": "Gaming headset with surround sound",
+		"imgSrc": "",
+		"rating": 5,
+		"price": 90,
+		"category": "Accessories"
+	},
+	{
+		"id": 11,
+		"name": "Corsair K95 Keyboard",
+		"description": "Mechanical keyboard with RGB lighting",
+		"imgSrc": "",
+		"rating": 4,
+		"price": 150,
+		"category": "Accessories"
+	},
+	{
+		"id": 12,
+		"name": "Razer DeathAdder Mouse",
+		"description": "Ergonomic gaming mouse",
+		"imgSrc": "",
+		"rating": 4,
+		"price": 70,
+		"category": "Accessories"
+	},
+	{
+		"id": 13,
+		"name": "SteelSeries Arctis Headset",
+		"description": "Wireless headset with retractable mic",
+		"imgSrc": "",
+		"rating": 5,
+		"price": 120,
+		"category": "Accessories"
+	},
+	{
+		"id": 14,
+		"name": "Logitech G915 Keyboard",
+		"description": "Wireless mechanical keyboard",
+		"imgSrc": "",
+		"rating": 5,
+		"price": 200,
+		"category": "Accessories"
+	},
+	{
+		"id": 15,
+		"name": "SteelSeries Rival 600 Mouse",
+		"description": "Mouse with dual optical sensor",
+		"imgSrc": "",
+		"rating": 4,
+		"price": 80,
+		"category": "Accessories"
+	},
+	{
+		"id": 16,
+		"name": "Razer Kraken Headset",
+		"description": "Immersive gaming headset",
+		"imgSrc": "",
+		"rating": 4,
+		"price": 75,
+		"category": "Accessories"
+	},
+
+	{
+		"id": 17,
+		"name": "Playstation 5",
+		"description": "Next-gen gaming console",
+		"imgSrc": "",
+		"rating": 5,
+		"price": 500,
+		"category": "Playstations"
+	},
+	{
+		"id": 18,
+		"name": "DualSense Controller",
+		"description": "Wireless controller for PS5",
+		"imgSrc": "",
+		"rating": 5,
+		"price": 70,
+		"category": "Playstations"
+	},
+	{
+		"id": 19,
+		"name": "PS5 Pulse 3D Headset",
+		"description": "Wireless headset with 3D audio",
+		"imgSrc": "",
+		"rating": 4,
+		"price": 100,
+		"category": "Playstations"
+	},
+	{
+		"id": 20,
+		"name": "Spider-Man Miles Morales Game",
+		"description": "Exclusive game for PS5",
+		"imgSrc": "",
+		"rating": 5,
+		"price": 60,
+		"category": "Playstations"
+	},
+	{
+		"id": 21,
+		"name": "Demon's Souls Game",
+		"description": "Remake for PS5",
+		"imgSrc": "",
+		"rating": 5,
+		"price": 70,
+		"category": "Playstations"
+	},
+	{
+		"id": 22,
+		"name": "DualSense Charging Station",
+		"description": "Dual controller charging station",
+		"imgSrc": "",
+		"rating": 4,
+		"price": 30,
+		"category": "Playstations"
+	},
+	{
+		"id": 23,
+		"name": "Playstation Camera",
+		"description": "Camera for streaming and AR",
+		"imgSrc": "",
+		"rating": 4,
+		"price": 50,
+		"category": "Playstations"
+	},
+	{
+		"id": 24,
+		"name": "PS5 Media Remote",
+		"description": "Remote for multimedia control",
+		"imgSrc": "",
+		"rating": 3,
+		"price": 25,
+		"category": "Playstations"
+	},
+
+	{
+		"id": 25,
+		"name": "DXRacer Chair",
+		"description": "Ergonomic gaming chair",
+		"imgSrc": "",
+		"rating": 4,
+		"price": 300,
+		"category": "Chairs"
+	},
+	{
+		"id": 26,
+		"name": "Secretlab Titan Chair",
+		"description": "Chair with adjustable lumbar support",
+		"imgSrc": "",
+		"rating": 5,
+		"price": 350,
+		"category": "Chairs"
+	},
+	{
+		"id": 27,
+		"name": "Razer Iskur Chair",
+		"description": "Chair with adjustable lumbar support",
+		"imgSrc": "",
+		"rating": 5,
+		"price": 400,
+		"category": "Chairs"
+	},
+	{
+		"id": 28,
+		"name": "Noblechairs Hero Chair",
+		"description": "High-quality synthetic leather chair",
+		"imgSrc": "",
+		"rating": 4,
+		"price": 330,
+		"category": "Chairs"
+	},
+	{
+		"id": 29,
+		"name": "Corsair T3 Rush Chair",
+		"description": "Chair with soft fabric upholstery",
+		"imgSrc": "",
+		"rating": 4,
+		"price": 280,
+		"category": "Chairs"
+	},
+	{
+		"id": 30,
+		"name": "AKRacing Core Chair",
+		"description": "Chair with thick padding",
+		"imgSrc": "",
+		"rating": 3,
+		"price": 320,
+		"category": "Chairs"
+	},
+	{
+		"id": 31,
+		"name": "Cougar Armor One Chair",
+		"description": "Chair with steel frame",
+		"imgSrc": "",
+		"rating": 4,
+		"price": 290,
+		"category": "Chairs"
+	},
+	{
+		"id": 32,
+		"name": "Vertagear Racing Chair",
+		"description": "Chair with racing design",
+		"imgSrc": "",
+		"rating": 4,
+		"price": 340,
+		"category": "Chairs"
+	}
+]

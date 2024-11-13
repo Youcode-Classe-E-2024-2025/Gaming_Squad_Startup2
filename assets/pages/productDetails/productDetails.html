@@ -11,93 +11,113 @@
     <link rel="stylesheet" href="./../../css/style.css">
 </head>
 <body class="p-0 m-0 bg-gradient-to-b from-black via-slate-900 to-slate-400">
-    <header>
+    <header class="fixed z-20 top-0 right-0 w-full">
+
         <nav class="bg-white h-24">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-6 py-10">
-              <a href="#" class=" text-black font-logo text-4xl">
-                  
-                  Game<span class="text-red">Rig</span>
-              </a>
-              <button type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-gray-200   " aria-controls="navbar-default" aria-expanded="false">
-                  <span class="sr-only">Open main menu</span>
-                  <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                  </svg>
-              </button>
-              <!-- hidden -->
-              <div class=" w-full md:block md:w-auto" id="navbar-default">
-                <ul class="font-medium flex flex-col   items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
-                  <li class=" w-full md:w-auto">
-                    <a href="/index.html" class="block py-2 px-3 text-white bg-red rounded md:bg-transparent md:text-red md:font-semibold text-[1.25rem]  md:p-0  hover:scale-[1.01] md:hover:scale-110 transition-transform" aria-current="page">Home</a>
-                  </li>
-                  <li  class=" w-full md:w-auto">
-                    <a href="./assets/pages/products/products.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  hover:scale-[1.01] md:hover:scale-110 transition-transform md:hover:text-red md:p-0  ">Products</a>
-                  </li>
-                  <li  class=" w-full md:w-auto">
-                    <a href="#contact" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  hover:scale-[1.01] md:hover:scale-110 transition-transform md:hover:text-red md:p-0  ">Contact Us</a>
-                  </li>
-                  <li  class=" w-full md:w-auto">
-                    <a href="#about" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  hover:scale-[1.01] md:hover:scale-110 transition-transform md:hover:text-red md:p-0  ">About Us</a>
-                  </li>
-                  <li class="flex justify-around w-full md:w-auto md:gap-8 md:justify-center ">
-                    <a role="button" href="./assets/pages/cart/cart.html" class="hover:scale-110 transition-all">
-                        <span class="sr-only">go to cart </span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                        </svg>
-                          
-                    </a>
+                <a href="#" class=" text-black font-logo text-4xl">
 
-                    <a role="button" href="./assets/pages/cart/cart.html"  class="hover:scale-110 transition-all">
-                        <span class="sr-only">login</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
-                        </svg>
-                      
-                          
-                    </a>
+                    Game<span class="text-red">Rig</span>
+                </a>
+                <button id="burger-icon" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-rose-200 focus:outline-none focus:ring-2 focus:ring-roce-200   "
+                    aria-controls="navbar-default" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+                <!-- hidden -->
+                <div class=" hidden w-full md:block md:w-auto" id="navbar-default">
+                    <ul
+                        class="font-medium flex flex-col   items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+                        <li class=" w-full md:w-auto">
+                            <a href="./../../../index.html"
+                                class="block py-2 px-3 text-white bg-red rounded md:bg-transparent md:text-red md:font-semibold text-[1.25rem]  md:p-0  hover:scale-[1.01] md:hover:scale-110 transition-transform"
+                                aria-current="page">Home</a>
+                        </li>
+                        <li class=" w-full md:w-auto">
+                            <a href="./../products/products.html"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  hover:scale-[1.01] md:hover:scale-110 transition-transform md:hover:text-red md:p-0  ">Products</a>
+                        </li>
+                        <li class=" w-full md:w-auto">
+                            <a href="#contact"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  hover:scale-[1.01] md:hover:scale-110 transition-transform md:hover:text-red md:p-0  ">Contact
+                                Us</a>
+                        </li>
+                        <li class=" w-full md:w-auto">
+                            <a href="#about"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  hover:scale-[1.01] md:hover:scale-110 transition-transform md:hover:text-red md:p-0  ">About
+                                Us</a>
+                        </li>
+                        <li class="flex justify-around w-full md:w-auto md:gap-8 md:justify-center ">
+                            <a role="button" href="./assets/pages/cart/cart.html"
+                                class="hover:scale-110 transition-all">
+                                <span class="sr-only">go to cart </span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-8">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                </svg>
 
-                  </li>
-                   
-                </ul>
-              
-              </div>
-              
+                            </a>
+
+                            <a role="button" href="./assets/pages/cart/cart.html"
+                                class="hover:scale-110 transition-all">
+                                <span class="sr-only">login</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-8">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+                                </svg>
+
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
             </div>
         </nav>
+
     </header>
-    <section class="flex flex-col md:grid md:grid-cols-12 md:gap-4 md:flex-row items-center md:items-start">
+    <section class="flex flex-col md:grid md:grid-cols-12 md:gap-4 md:flex-row items-center md:items-start mt-10">
         <div class="flex flex-col md:col-start-2 md:col-span-5">
             <div class="w-full text-center mt-[16px]"><h1 class="text-[6vw]  mx-auto md:hidden md:ml-0  static  text-[#EDF2F4]">Gamdias Aphrodite ML1</h1></div>
             <div class="w-[70vw] md:w-full md:ml-0 flex items-center md:h-[400px] h-[70vw] mt-[30px] md:mt-[70px]  bg-[#EEEEEE]">
-                <img class="object-cover" src="Gamdias-Aphrodite-ML1-Setup-Game-removebg-preview.png" alt="">
+                <img id="img-prancipal" class="object-contain h-full w-full" src="" alt="">
             </div>
             <div class="flex md:grid md:grid-cols-5 md:gap-4 flex-row mt-[20px] md:mt-[29px]">
-                    <div class="bg-[#EEE] h-[21vw] w-[21vw] md:h-full md:w-full md:ml-0 md:col-start-2"><img src="Gamdias-Aphrodite-ML1-Setup-Game1-removebg-preview.png" alt=""></div>
-                   <div class="bg-[#EEE] h-[21vw] w-[21vw] ml-[3.5vw] md:h-full md:w-full md:ml-0 md:col-start-3"> <img src="Gamdias-Aphrodite-ML1-Setup-Game13-removebg-preview.png" alt=""></div>
-                    <div class="bg-[#EEE] h-[21vw] w-[21vw] ml-[3.5vw] md:h-full md:w-full md:ml-0 md:col-start-4"><img src="Gamdias-Aphrodite-ML1-Setup-Game14-removebg-preview.png"></div>
+                    <div id="img-1" class="bg-[#EEE] h-[21vw] w-[21vw] cursor-pointer md:h-full md:w-full md:ml-0 md:col-start-2"><button><img src="/assets/images/manette-1-removebg-preview.png" alt=""></button></div>
+                   <div id="img-2" class="bg-[#EEE] h-[21vw] w-[21vw] cursor-pointer ml-[3.5vw] md:h-full md:w-full md:ml-0 md:col-start-3"><button><img src="/assets/images/manette-1-1-removebg-preview.png" alt=""></button></div>
+                    <div id="img-3" class="bg-[#EEE] h-[21vw] w-[21vw] cursor-pointer ml-[3.5vw] md:h-full md:w-full md:ml-0 md:col-start-4"><button><img src="/assets/images/manette-1-2-removebg-preview.png"></button></div>
             </div>
         </div>
         <div class="flex md:items-start md:col-start-8 md:col-span-4 items-center flex-col mt-[10px] md:mt-[70px] md:ml-0">
-            <h1 class="text-[32px] max-md:hidden static  w-auto h-auto text-[#EDF2F4] sm:text-[2.5vw]">Gamdias Aphrodite ML1</h1>
+            <h1 id="titre" class="text-[32px] max-md:hidden static  w-auto h-auto text-[#EDF2F4] sm:text-[2.5vw]">Gamdias Aphrodite ML1</h1>
             <div class="flex flex-row md:flex-col">
-                <div class="md:mt-[63px]">
+                <div class="md:mt-5 mt-6">
                     <img class="inline w-[4vw] h-[4vw] md:w-[2vw] md:h-[2vw]" src="https://img.icons8.com/fluency/48/star--v1.png" alt="">
                     <img class="inline w-[4vw] h-[4vw] md:w-[2vw] md:h-[2vw]" src="https://img.icons8.com/fluency/48/star--v1.png" alt="">
                     <img class="inline w-[4vw] h-[4vw] md:w-[2vw] md:h-[2vw]" src="https://img.icons8.com/fluency/48/star--v1.png" alt="">
                     <img class="inline w-[4vw] h-[4vw] md:w-[2vw] md:h-[2vw]" src="https://img.icons8.com/fluency/48/star--v1.png" alt="">
                     <img class="inline w-[4vw] h-[4vw] md:w-[2vw] md:h-[2vw]" src="https://img.icons8.com/ios-filled/50/737373/star--v1.png" alt="">
                 </div>
-                <div><p class="w-auto h-full  md:mt-[45px] md:text-[40px] ml-20 md:ml-0 text-[6vw]  text-[#C7CAD1]">99.99$</p></div>
+                <div><p class="w-auto h-full  md:mt-[35px] md:text-[40px] ml-20 md:ml-0 text-[6vw]  text-[#C7CAD1]">99.99$</p></div>
             </div>
             <!-- hna -->
-            <p class="md:w-full w-[50vw] md:mt-[35px] line-clamp-2 hover:line-clamp-none h-full mt-[17px] text-[#C7CAD1]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam harum non explicabo earum Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias iure fugit vel error, reprehenderit quibusdam culpa veritatis porro repudiandae maiores!</p>
+            <p id="desc" class="md:w-full w-[50vw] md:mt-[35px] line-clamp-2 h-full mt-[17px] text-[#C7CAD1]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam harum non explicabo earum Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias iure fugit vel error, reprehenderit quibusdam culpa veritatis porro repudiandae maiores!</p>
             <div class="flex flex-row mt-[35px]" >
             <div class="flex md:grid md:grid-cols-4 md:gap-4 items-center flex-row mt-">
                 <div class="flex flex-row md:col-span-2">
-                    <button class="bg-black h-[9vw] w-[12vw] md:h-[48px] md:w-[50px] text-white text-2xl">-</button>
-                    <button class="bg-[#D9D9D9] h-[9vw] w-[12vw] md:h-[48px] md:w-[50px]">0</button>
-                    <button class="bg-black h-[9vw] w-[12vw] md:h-[48px] md:w-[50px] text-white">+</button>
+                    <button id="moin" class="bg-black h-[9vw] w-[12vw] md:h-[48px] md:w-[50px] text-white text-2xl">-</button>
+                    <input id="contiti" type="text" class="bg-[#D9D9D9] h-[9vw] w-[12vw] md:h-[48px] text-center md:w-[50px]" ></input>
+                    <button id="plus" class="bg-black h-[9vw] w-[12vw] md:h-[48px] md:w-[50px] text-white">+</button>
                 </div>
                 <div class="col-span-2">
                 <button class="w-[40vw] h-[10vw] md:w-full md:h-[48px] bg-[#F04D0D] ml-[17px] md:ml-[6.2vw]  rounded-[8px] text-[#EDF2F4]" onclick="print()">add to card</button>
@@ -105,7 +125,7 @@
             </div>
             </div>
             <div class="w-[90vw] h-[22vw] md:w-full md:h-[14vw] border border-solid border-white mt-[24px]">
-                <div class="flex flex-row"><img class="mr-3 w-[10vw] md:mr-8 md:w-[5vw] h-[7vw] ml-2" src="https://img.icons8.com/?size=100&id=vUX3MkI7D7xW&format=png&color=000000" alt="">
+                <div class="flex flex-row"><img class="mr-3 w-[10vw] md:mr-8 md:w-[5vw] h-[7vw] md:h-[30px] ml-2" src="https://img.icons8.com/?size=100&id=vUX3MkI7D7xW&format=png&color=000000" alt="">
                     <div>
                         <p class="text-[#C7CAD1] text-[12px] md:text-[2.2vw]">Free Delivery</p>
                         <p class="text-[#C7CAD1] opacity-70 text-[10px] md:text-[1.1vw]">Enter your postal code for Delivery Availability</p>
@@ -127,7 +147,9 @@
         </div>
     </section>
     <div class="w-full h-52 bg-black mt-12">
-
+        
     </div>
+    <script src="/assets/pages/productDetails/productDetails.js"></script>
+    <script src="./../../../main.js"></script>
 </body>
 </html>

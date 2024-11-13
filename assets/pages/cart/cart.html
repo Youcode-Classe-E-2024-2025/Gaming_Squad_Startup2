@@ -6,7 +6,6 @@
     <title>cart</title>
     <link rel="stylesheet" href="./../../css/style.css">
     <style>
-        
         @media (max-width:800px){
             .titre{
                 font-size: 12px;
@@ -31,10 +30,9 @@
         @media (max-width:640px){
             .div{
                 height: fit-content;
-                width: 60%;
+                width: 90%;
             }
         }
-       
     </style>
 </head>
 <body class="p-0 m-0 bg-gradient-to-b from-black via-slate-900 to-slate-400">
@@ -43,8 +41,8 @@
         <div><p class="text-[14px] mt-[40px] text-white">You have 3 item in your cart</p></div>
         
        
-        <div class="div md:mt-[36px] sm:mt-[36px] mt-[20px] h-[30vw] md:h-[121px] sm:h-[121px] w-[95vw] sm:w-[60vw] md:w-[60vw] bg-white rounded-lg flex flex-row">
-                <img class="md:w-[110px] sm:w-[110px] w-[70px] mr-4 md:mr-[10px] ml-[10px] h-[75px] sm:h-[100px] md:h-[100px] mt-3" src="" alt="">
+        <div class="relative div md:mt-[36px] sm:mt-[36px] mt-[20px] h-[30vw] md:h-[121px] sm:h-[121px] w-[95vw] sm:w-[60vw] md:w-[60vw] bg-white rounded-lg flex flex-row">
+                <img class="md:w-[110px] sm:w-[110px] mb-4 w-[70px] mr-4 md:mr-[10px] ml-[10px] h-[75px] sm:h-[100px] md:h-[100px] mt-3" src="" alt="">
            <div class="flex flex-">
                 <div class="flex flex-col items-center mr-0 md:mr-[40px]">
                     <p class="titre md:text-[20px] w-full text-[14px] ml-0 md:ml-[30px] mt-6 md:mt-16px]">Gamdias Aphrodite ML1</p>
@@ -52,16 +50,16 @@
                 </div>
                 <div class="flex flex-col items-center">
                     <div class=" flex ml-2 md:ml-10">
-                        <p class="text-[18px] max-sm:text-[20px] md:text-[24px] ">99.9 9$</p>
+                        <p class="absolute right-3 md:right-10 text-[18px] max-sm:text-[20px] md:text-[24px] ">99.9 9$</p>
                     </div>
-                    <div class="flex flex-row md:col-span-2 mt-3 mr-3 my-auto">
+                    <div class="absolute right-0 bottom-10 flex flex-row md:col-span-2 mt-3 mr-3 my-auto">
                         <button class="bg-white border-solid border-black border md:h-[40px] h-[20px] w-[20px] md:w-[40px] flex items-center text-black md:text-2xl"><p class="ml-[7px]">-</p></button>
                         <button class="bg-white md:h-[40px] h-[20px] w-[20px] md:w-[40px] border-solid border-black border">0</button>
                         <button class="bg-white md:h-[40px] h-[20px] w-[20px] md:w-[40px] flex items-center  text-black border-solid border-black border"><p class="ml-[4px]">+</p></button>
                     </div >
                     
                     <div>
-                        <img class="w-7" src="https://img.icons8.com/plasticine/100/737373/filled-trash.png" alt="sss">
+                        <img class="w-7 absolute right-5 md:right-10 bottom-0" src="https://img.icons8.com/plasticine/100/737373/filled-trash.png" alt="sss">
                     </div>
                 </div>
             </div>
@@ -69,8 +67,6 @@
         <div><button class="md:w-[200px] w-[150px] md:h-[50px] h-[40px] text-white md:text-[24px] text-[22px] mt-6 bg-[#F04D0D]" onclick="print()">pay now</button></div>
     </section>
     <div class="h-52px w-full bg-black ">
-        
-
     </div>
 </body>
 </html>

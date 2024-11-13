@@ -8,7 +8,7 @@ module.exports = {
         titre: '#EDF2F4',         // Light background color #EDF2F4
         sous: '#C7CAD1',          // Little titles  #C7CAD1
         red: '#EF233C',           // Button color #EF233C 
-        orange:'#D90429',         //
+        orange:'#F04D0D',         //
         btnhover: '#D90429',      // Hover Color #D90429
     },
     fontFamily:{
