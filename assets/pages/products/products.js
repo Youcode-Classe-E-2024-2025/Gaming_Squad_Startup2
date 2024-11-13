@@ -43,3 +43,21 @@ function closeForm() {
 	overlay.classList.replace("fade-in", "fade-out");
 	overlay.addEventListener("animationend", () => overlay.remove());
 }
+
+function getFormData() {
+	const name = document.querySelector("#name").value;
+	const description = document.querySelector("#description").value;
+	const price = document.querySelector("#price").value;
+	const rating = document.querySelector("#rating").value;
+	const image = document.querySelector("#image").value;
+	const category = document.querySelector("#category").value;
+	return {
+		id: Date.now(),
+		imgSrc: image,
+		name,
+		description,
+		price,
+		rating,
+		category,
+	};
+}
