@@ -61,3 +61,12 @@ function getFormData() {
 		category,
 	};
 }
+
+window.AddProduct = function (event) {
+	event.preventDefault();
+	const newProduct = getFormData();
+	products.push(newProduct);
+	updateLocalStorage();
+	displayProducts(products);
+	closeForm();
+};
