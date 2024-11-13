@@ -79,3 +79,13 @@ window.deleteProduct = function (event, element) {
 	displayProducts(products);
 	updateLocalStorage();
 };
+
+const searchBar = document.querySelector("#search");
+
+searchBar.addEventListener("input", search);
+
+function search() {
+	const query = searchBar.value.toLowerCase();
+	const searchedProducts = products.filter((product) => product.name.toLowerCase().includes(query));
+	displayProducts(searchedProducts);
+}
