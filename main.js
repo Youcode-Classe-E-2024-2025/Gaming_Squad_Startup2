@@ -1,6 +1,12 @@
 const burgerIcon = document.getElementById('burger-icon') ;
 const navbar = document.getElementById('navbar-default') ;
 const welcomeSection = document.querySelector('section#welcome');
+// welcome cart
+const wlcmTitle = document.querySelector('section#welcome #wlcm-title');
+const wlcmSousTitle = document.querySelector('section#welcome #wlcm-sous-title');
+const wlcmImg = document.querySelector('section#welcome #wlcm-img');
+const wlcmContent = document.querySelector('section#welcome #wlcm-content');
+
 console.log(welcomeSection);
 const wlcmData =[
     {
@@ -34,43 +40,53 @@ burgerIcon.addEventListener('click',()=> {navbar.classList.toggle('hidden')});
 
 
 
-function createCartWlcm(index){
+// function createCartWlcm(index){
+
+//     const item= wlcmData[index]
+//     const Div=document.createElement('div')
+//     Div.className='p-10'
+//     Div.innerHTML=` 
+//     <div
+//         class="max-w-[66.5rem] h-[36.25rem] mx-auto relative rounded-2xl overflow-hidden  bg-white   text-white">
+//         <img src="${item.img}" alt="${item.imgAlt} "
+//             class="bg-left object-cover w-full h-full rounded-2xl">
+  
+//         <div
+//             class=" md:p-28 grid gap-4 items-center  grid-cols-2   absolute top-0 right-0 h-full w-full p-10 bg-gradient-to-r from-[#00000077] to-[#00000001]">
+//             <h1 class=" col-start-1 row-start-4 self-end col-span-full  font-bold text-[2.5rem]">${item.title}</h1>
+//             <p class="  col-start-1 row-start-5 col-span-full font-normal text-2xl">${item.sousTitle}</p>
+//             <p class="md:pl-4  col-start-1 row-start-6 row-span-2 self-start col-span-full md:col-span-1">
+//             ${item.content}
+               
+//             </p>
+//             <button type="button"
+//                 class="col-start-1  row-start-8 col-span-full px-4 py-2 w-fit rounded-lg border-2 border-white hover:bg-orange hover:scale-105  bg-dark ">more
+//                 details </button>
+//         </div>
+
+//     </div>`
+//     welcomeSection.innerHTML='';
+//     welcomeSection.append(Div);
+// }
+function replaceCartWlcm(index){
 
     const item= wlcmData[index]
-    const Div=document.createElement('div')
-    Div.className='p-10'
-    Div.innerHTML=` 
-    <div
-        class="max-w-[66.5rem] h-[36.25rem] mx-auto relative rounded-2xl overflow-hidden  bg-white   text-white">
-        <img src="${item.img}" alt="${item.imgAlt} "
-            class="bg-left object-cover w-full h-full rounded-2xl">
-  
-        <div
-            class=" md:p-28 grid gap-4 items-center  grid-cols-2   absolute top-0 right-0 h-full w-full p-10 bg-gradient-to-r from-[#00000077] to-[#00000001]">
-            <h1 class=" col-start-1 row-start-4 self-end col-span-full  font-bold text-[2.5rem]">${item.title}</h1>
-            <p class="  col-start-1 row-start-5 col-span-full font-normal text-2xl">${item.sousTitle}</p>
-            <p class="md:pl-4  col-start-1 row-start-6 row-span-2 self-start col-span-full md:col-span-1">
-            ${item.content}
-               
-            </p>
-            <button type="button"
-                class="col-start-1  row-start-8 col-span-full px-4 py-2 w-fit rounded-lg border-2 border-white hover:bg-orange hover:scale-105  bg-dark ">more
-                details </button>
-        </div>
-
-    </div>`
-    welcomeSection.innerHTML='';
-    welcomeSection.append(Div);
+     wlcmTitle.textContent=item.title;
+     wlcmSousTitle.innerHTML=item.sousTitle;
+     wlcmImg.setAttribute('src', item.img);
+     wlcmImg.setAttribute('alt', item.imgAlt);
+     wlcmContent.textContent=item.content;
 }
+
 
 function welcomeSectionHandler(){
-    let i=0
-    createCartWlcm((i++))
+    let i=1;
+    
      setInterval(() => {
-        createCartWlcm((i++)%3)
+        replaceCartWlcm((i++)%3)
      }, 3000);
 }
-// welcomeSectionHandler();
+welcomeSectionHandler();
 
 // carousel best products 
 const leftBnt =document.getElementById('left-carousel-btn');
