@@ -12,19 +12,6 @@
         href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        @layer utilities {
-            
-            @keyframes hue-rotate {
-                100% {
-                    filter: hue-rotate(360deg);
-                }
-            }
-            .wrapper:hover {
-            animation: hue-rotate 1s linear infinite;
-        }
-        }
-    </style>
 </head>
 
 <title>Document</title>
@@ -33,7 +20,7 @@
 <body class="p-0 m-0 bg-gradient-to-b from-black via-slate-900 to-slate-400">
     <!------------------------------------------------------------------------Début de Header---------------------------------------------------------------------------------------->
     <header>
- 
+        
         <nav class="bg-white h-24">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-6 py-10">
               <a href="#" class=" text-black font-logo text-4xl">
@@ -91,7 +78,7 @@
     </header>
     <!-----------------------------------------------------------------------Form De Login In-------------------------------------------------------------------------------------->
     <main class="flex items-center justify-center min-h-screen from-black via-slate-900 to-slate-400">
-        <div class="wrapper relative w-96 h-[500px] bg-black p-10 shadow-[0_0_50px_#0ef] rounded-2xl overflow-hidden animate-hue-rotate">
+        <div class="wrapper relative w-96 h-[500px] bg-black p-10   rounded-2xl overflow-hidden animate-hue-rotate">
             <div class="form-wrapper sign-in flex justify-center items-center w-full h-full transition-transform duration-1000 ease-in-out">
                 <form>
                     <h2 class="text-3xl text-white text-center mb-8">Login</h2>
@@ -107,13 +94,13 @@
                         <input type="checkbox" class="accent-[#11a0a9]">
                         <label class="text-white text-sm ml-2">Remember me</label>
                     </div>
-                    <button type="submit" class="w-full h-10 bg-[#0ef] shadow-[0_0_10px_#0ef] text-black font-medium rounded-full">Login</button>
+                    <button type="submit" class="w-full h-10 bg-[#EF230C] shadow-[0_0_10px_#EF230C] text-black font-medium rounded-full">Login</button>
                     <div class="signUp-link text-center text-white text-sm mt-4">
-                        <p>Don't have an account? <a href="#" class="signUpBtn-link text-[#0ef] font-medium hover:underline">sign-up</a></p>
+                        <p>Don't have an account? <a href="#" class="signUpBtn-link text-[#EF230C] font-medium hover:underline">sign-up</a></p>
                     </div>
                 </form>
             </div>
-            <div class="form-wrapper sign-up flex justify-center items-center w-full h-full transition-transform duration-1000 ease-in-out">
+            <div class="form-wrapper sign-up flex justify-center items-center w-full h-full transition-transform duration-1000 ease-in-out pt-11">
                 <form>
                     <h2 class="text-3xl text-white text-center mb-8">Sign Up</h2>
                     <div class="relative mb-8 border-b-2 border-white">
@@ -132,9 +119,9 @@
                         <input type="checkbox" class="accent-[#11a0a9]">
                         <label class="text-white text-sm ml-2">I agree to the terms & conditions</label>
                     </div>
-                    <button type="submit" class="w-full h-10 bg-[#0ef] shadow-[0_0_10px_#0ef] text-black font-medium rounded-full">Sign Up</button>
+                    <button type="submit" class="w-full h-10 bg-[#EF230C] shadow-[0_0_10px_#EF230C] text-black font-medium rounded-full">Sign Up</button>
                     <div class="signUp-link text-center text-white text-sm mt-4">
-                        <p>Already have an account? <a href="#" class="signInBtn-link text-[#0ef] font-medium hover:underline">sign In</a></p>
+                        <p>Already have an account? <a href="#" class="signInBtn-link text-[#EF230C] font-medium hover:underline">sign In</a></p>
                     </div>
                 </form>
             </div>
