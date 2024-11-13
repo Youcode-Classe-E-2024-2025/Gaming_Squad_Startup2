@@ -72,3 +72,29 @@ function welcomeSectionHandler(){
 }
 // welcomeSectionHandler();
 
+// carousel best products 
+const leftBnt =document.getElementById('left-carousel-btn');
+const rightBnt =document.getElementById('right-carousel-btn');
+const carouselContent=document.getElementById('carousel-content');
+const carouselContainer=document.getElementById('carousel-container');
+const item=document.querySelector('.cartCarousel');
+
+// console.log(' parent has child',carouselContainer.clientWidth);
+// console.log(' child has item',carouselContent.clientWidth,"e",item.clientWidth*6+128*5, "rr",(item.clientWidth*6+128*5)/2 -128/2);
+// console.log('  item',item.clientWidth);
+const gap= (carouselContainer.clientWidth-(item.clientWidth*3))/2 
+console.log('gap',gap);
+const scrollWidth= item.clientWidth+gap;
+console.log('needed width',item.clientWidth*3+128*2);
+console.log(scrollWidth);
+
+leftBnt.addEventListener('click',()=>{
+    
+
+    carouselContainer.scrollBy({ left: (scrollWidth*-1), behavior: 'smooth' })
+})
+rightBnt.addEventListener('click',()=>{
+
+    carouselContainer.scrollBy({ left: scrollWidth, behavior: 'smooth' })
+})
+
