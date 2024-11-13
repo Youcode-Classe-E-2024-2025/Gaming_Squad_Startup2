@@ -71,11 +71,19 @@ burgerIcon.addEventListener('click',()=> {navbar.classList.toggle('hidden')});
 function replaceCartWlcm(index){
 
     const item= wlcmData[index]
-     wlcmTitle.textContent=item.title;
-     wlcmSousTitle.innerHTML=item.sousTitle;
-     wlcmImg.setAttribute('src', item.img);
-     wlcmImg.setAttribute('alt', item.imgAlt);
-     wlcmContent.textContent=item.content;
+     
+     wlcmImg.style.opacity = '0';
+     wlcmImg.style.transition = '0.5s';
+     setTimeout(() => {
+         wlcmImg.setAttribute('src', item.img);
+         wlcmImg.setAttribute('alt', item.imgAlt);
+         wlcmTitle.textContent=item.title;
+         wlcmSousTitle.innerHTML=item.sousTitle;
+         wlcmContent.textContent=item.content;
+         wlcmImg.style.transition = '0.5s';
+
+         wlcmImg.style.opacity = '1';
+     }, 250);
 }
 
 
@@ -95,13 +103,16 @@ const carouselContent=document.getElementById('carousel-content');
 const carouselContainer=document.getElementById('carousel-container');
 const item=document.querySelector('.cartCarousel');
 
-// console.log(' parent has child',carouselContainer.clientWidth);
+console.log(' parent has child',carouselContainer.clientWidth);
 // console.log(' child has item',carouselContent.clientWidth,"e",item.clientWidth*6+128*5, "rr",(item.clientWidth*6+128*5)/2 -128/2);
 // console.log('  item',item.clientWidth);
+console.log(Number.parseFloat(getComputedStyle(carouselContainer).width));
+
 const gap= (carouselContainer.clientWidth-(item.clientWidth*3))/2 
-console.log('gap',gap);
+console.log('sssssss', window.clientWidth);
+console.log('gap',gap,"gap",carouselContent.gap);
 const scrollWidth= item.clientWidth+gap;
-console.log('needed width',item.clientWidth*3+128*2);
+// console.log('needed width',item.clientWidth*3+128*2);
 console.log(scrollWidth);
 
 leftBnt.addEventListener('click',()=>{
