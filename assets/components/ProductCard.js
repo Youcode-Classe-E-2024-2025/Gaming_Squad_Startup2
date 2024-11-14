@@ -1,5 +1,5 @@
 export default function (product) {
-	return `<figure class="product-card relative cursor-pointer" id="${product?.id}" onclick="openProductDetails()">
+	return `<figure class="product-card relative cursor-pointer" id="${product?.id}" onclick="openProductDetails(event)">
 					<div class="box absolute top-0 right-1.5 z-10">
 						<button data-id="${
 							product?.id
@@ -19,7 +19,7 @@ export default function (product) {
 							class="aspect-square hover:scale-110 transition-transform duration-300" />
 					</div>
 					<button
-                  data-id="${product?.id}" onclick="addProductToCart()"
+                  data-id="${product?.id}" onclick="addProductToCart(event)"
 						class="add-to-cart-btn text-sm bg-[#F04D0D] text-white font-medium w-full p-2 hover:scale-105 hover:bg-[rgba(240,77,13,0.8)] transition-all duration-300">
 						add to cart <i class="fa-solid fa-cart-plus"></i>
 					</button>

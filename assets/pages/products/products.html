@@ -52,11 +52,14 @@
 				class="products-wrapper mb-5 col-start-2 xl:col-start-3 col-end-12 xl:col-end-11 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 lg:gap-10"></section>
 			<div
 				class="pagination mx-auto col-span-full text-xs sm:text-base flex items-center justify-center gap-2 w-48 [&>*]:rounded-full [&>*]:border-2 [&>*]:border-solid [&>*]:border-black [&>*]:aspect-square [&>*]:flex-1 [&>*]:flex [&>*]:justify-center [&>*]:items-center [&>*]:font-medium [&>*]:text-white">
-				<div class="left p-0.5"><i class="fa-solid fa-chevron-left font-black text-2xl"></i></div>
-				<p class="page-name">1</p>
-				<p class="page-name">2</p>
-				<p class="page-name">3</p>
-				<div class="right p-0.5"><i class="fa-solid fa-chevron-right font-black text-2xl"></i></div>
+				<div class="left p-0.5 cursor-pointer" onclick="previousSlice()">
+					<i class="fa-solid fa-chevron-left font-black text-2xl"></i>
+				</div>
+				<p class="page-name cursor-pointer" data-index="1" onclick="afficherSlice(this)">1</p>
+				<p class="page-name cursor-pointer" data-index="2" onclick="afficherSlice(this)">2</p>
+				<div class="right p-0.5 cursor-pointer" onclick="nextSlice()">
+					<i class="fa-solid fa-chevron-right font-black text-2xl"></i>
+				</div>
 			</div>
 		</main>
 		<div
