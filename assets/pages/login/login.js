@@ -48,3 +48,28 @@ loginForm.addEventListener('submit', (e) => {
         alert("Nom d'utilisateur ou mot de passe incorrect");
     }
 });
+inputs.forEach(input  => {
+    const label = input.nextElementSibling; 
+
+    input.addEventListener('focus', () => {
+        label.style.transform = 'translateY(-100%)';  
+        label.style.fontSize = '20px'; 
+        label.style.top = '0'; 
+        label.style.color = '#EF230C'; 
+    });
+    input.addEventListener('blur', () => {
+        if (input.value === '') {
+            label.style.transform = 'translateY(20%)';  
+            label.style.color = '#ffff'
+       
+        }
+    });
+
+    
+    if (input.value !== '') {
+        label.style.transform = 'translateY(-100%)';   
+        label.style.top = '0';
+        label.style.color = '#EF230C';
+    }
+
+});  
