@@ -18,16 +18,17 @@ export default function () {
 					<input
 						id="price"
 						type="number"
+						min="1"
 						placeholder="Product price"
 						class="text-sm md:text-base w-full px-4 py-2 mb-4 border border-gray-400 rounded" />
 					<input
-						id="rating"
-						type="number"
+						id="rating" type="number"
+						min="0" max="5"
 						placeholder="Product rating (0 to 5)"
 						class="text-sm md:text-base w-full px-4 py-2 mb-4 border border-gray-400 rounded" />
 					<input
 						id="image"
-						type="text"
+						type="url"
 						placeholder="Image link"
 						class="text-sm md:text-base w-full px-4 py-2 mb-4 border border-gray-400 rounded" />
 					<select name="category" id="category" class="text-sm md:text-base w-full px-4 py-2 mb-4 border border-gray-400 rounded">
