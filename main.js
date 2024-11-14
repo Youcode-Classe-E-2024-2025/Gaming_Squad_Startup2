@@ -108,20 +108,29 @@ console.log(' parent has child',carouselContainer.clientWidth);
 // console.log('  item',item.clientWidth);
 console.log(Number.parseFloat(getComputedStyle(carouselContainer).width));
 
-const gap= (carouselContainer.clientWidth-(item.clientWidth*3))/2 
-console.log('sssssss', window.clientWidth);
-console.log('gap',gap,"gap",carouselContent.gap);
-const scrollWidth= item.clientWidth+gap;
-// console.log('needed width',item.clientWidth*3+128*2);
-console.log(scrollWidth);
+// const gap= (carouselContainer.clientWidth-(item.clientWidth*3))/2 
+// console.log('sssssss', window.clientWidth);
+// console.log('gap',gap,"gap",carouselContent.gap);
+// const scrollWidth= item.clientWidth+gap;
+// // console.log('needed width',item.clientWidth*3+128*2);
+// console.log(scrollWidth);
 
-leftBnt.addEventListener('click',()=>{
-    
+const wlcmScroll = (op)=>{
+    const gap= (carouselContainer.clientWidth-(item.clientWidth*3))/2 
+ 
+    const scrollWidth= item.clientWidth+gap;
 
-    carouselContainer.scrollBy({ left: (scrollWidth*-1), behavior: 'smooth' })
-})
-rightBnt.addEventListener('click',()=>{
+    carouselContainer.scrollBy({ left: (scrollWidth*op), behavior: 'smooth' })
+}
 
-    carouselContainer.scrollBy({ left: scrollWidth, behavior: 'smooth' })
-})
+leftBnt.addEventListener('click',()=>{ wlcmScroll(-1)})
+rightBnt.addEventListener('click',()=>{ wlcmScroll(1)})
+
+// Get the carousel buttons and the carousel content container
+const leftBtn = document.getElementById("left-carousel-btn");
+const rightBtn = document.getElementById("right-carousel-btn");
+// const carouselContent = document.getElementById("carousel-content");
+
+
+
 
