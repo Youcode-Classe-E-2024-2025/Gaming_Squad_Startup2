@@ -5,18 +5,11 @@ import AddForm from "../../components/AddForm.js";
 
 let products = [];
 const productsWrapper = document.querySelector(".products-wrapper");
+// select main element to add in it AddForm component
 const main = document.querySelector("main");
 
-function updateLocalStorage() {
+function updateLocalStorageProducts() {
 	localStorage.setItem("products", JSON.stringify(products));
-}
-
-function shuffle(array) {
-	for (let i = array.length - 1; i > 0; i--) {
-		const j = Math.floor(Math.random() * (i + 1)); // Générer un index aléatoire
-		[array[i], array[j]] = [array[j], array[i]]; // Échanger les éléments
-	}
-	return array;
 }
 
 fetch("../../data/data.json")
@@ -24,12 +17,9 @@ fetch("../../data/data.json")
 	.then((data) => {
 		if (localStorage.getItem("products")) {
 			products = JSON.parse(localStorage.getItem("products"));
-			console.log(products);
 		} else {
 			products = data;
-			console.log(products);
-
-			updateLocalStorage();
+			updateLocalStorageProducts();
 		}
 		afficherSlice();
 	})
@@ -80,7 +70,7 @@ window.AddProduct = function (event) {
 	const isDataValid = validateData();
 	if (isDataValid) {
 		products.push(newProduct);
-		updateLocalStorage();
+		updateLocalStorageProducts();
 		displayProducts(products);
 		closeForm();
 	}
@@ -118,7 +108,7 @@ window.deleteProduct = function (event, element) {
 	const index = products.findIndex((product) => product.id == id);
 	products.splice(index, 1);
 	displayProducts(products);
-	updateLocalStorage();
+	updateLocalStorageProducts();
 };
 
 const searchBar = document.querySelector("#search");
@@ -134,13 +124,10 @@ function search() {
 let indexPage = 1;
 window.afficherSlice = function (element) {
 	if (element?.dataset.index) indexPage = Number(element.dataset.index);
-	console.log(indexPage);
-	console.log(element?.dataset.index);
 
 	const start = (indexPage - 1) * 16;
 	const end = indexPage * 16;
 	displayProducts(products.slice(start, end));
-	console.log(products.slice(start, end));
 };
 
 window.nextSlice = function () {
@@ -152,3 +139,24 @@ window.previousSlice = function () {
 	if (indexPage > 1) indexPage--;
 	afficherSlice();
 };
+
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function updateLocalStorageCart() {
+	localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+window.addProductToCart = function (event) {
+	event.preventDefault();
+	event.stopPropagation();
+	const id = event.currentTarget.dataset.id;
+	const product = products.find((prod) => prod.id == id);
+	const productIndexInCart = cart.findIndex((prod) => prod.id == id);
+	const isAlreadyInCart = productIndexInCart !== -1;
+	if (isAlreadyInCart) cart[productIndexInCart].quantity++;
+	else cart.push({ ...product, quantity: 1 });
+	updateLocalStorageCart();
+	console.log(cart);
+};
+
+window.openProductDetails = function (event) {};
