@@ -21,7 +21,7 @@ fetch("../../data/data.json")
 			products = data;
 			updateLocalStorageProducts();
 		}
-		afficherSlice();
+		displaySlice();
 	})
 	.catch((error) => console.error(error));
 
@@ -107,7 +107,7 @@ window.deleteProduct = function (event, element) {
 	const id = element.dataset.id;
 	const index = products.findIndex((product) => product.id == id);
 	products.splice(index, 1);
-	displayProducts(products);
+	displaySlice();
 	updateLocalStorageProducts();
 };
 
@@ -122,7 +122,7 @@ function search() {
 }
 
 let indexPage = 1;
-window.afficherSlice = function (element) {
+window.displaySlice = function (element) {
 	if (element?.dataset.index) indexPage = Number(element.dataset.index);
 
 	const start = (indexPage - 1) * 16;
@@ -132,12 +132,12 @@ window.afficherSlice = function (element) {
 
 window.nextSlice = function () {
 	if (indexPage < 2) indexPage++;
-	afficherSlice();
+	displaySlice();
 };
 
 window.previousSlice = function () {
 	if (indexPage > 1) indexPage--;
-	afficherSlice();
+	displaySlice();
 };
 
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
