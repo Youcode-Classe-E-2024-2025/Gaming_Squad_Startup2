@@ -3,7 +3,7 @@
 		"id": 1,
 		"name": "Predator Gaming PC",
 		"description": "High-performance gaming PC with RTX 3080",
-		"imgSrc": "",
+		"imgSrc": ["/assets/images/pc-1-removebg-preview.png","/assets/images/pc-1-1-removebg-preview.png","/assets/images/pc-1-2-removebg-preview.png"],
 		"rating": 5,
 		"price": 1500,
 		"category": "PC Gamer"
@@ -12,7 +12,7 @@
 		"id": 2,
 		"name": "Alienware Gaming PC",
 		"description": "Premium gaming PC with AMD Ryzen 9",
-		"imgSrc": "",
+		"imgSrc": ["/assets/images/pc-2-removebg-preview.png","/assets/images/pc-2-1-removebg-preview.png","/assets/images/pc-2-2-removebg-preview.png"],
 		"rating": 5,
 		"price": 1800,
 		"category": "PC Gamer"
@@ -21,7 +21,7 @@
 		"id": 3,
 		"name": "MSI Gaming PC",
 		"description": "MSI gaming PC for intense gameplay",
-		"imgSrc": "",
+		"imgSrc": ["/assets/images/pc-3-removebg-preview.png","/assets/images/pc-3-1-removebg-preview.png","/assets/images/pc-3-2-removebg-preview.png"],
 		"rating": 4,
 		"price": 1400,
 		"category": "PC Gamer"
@@ -30,7 +30,7 @@
 		"id": 4,
 		"name": "Asus ROG Gaming PC",
 		"description": "Asus ROG Strix PC with Intel i9",
-		"imgSrc": "",
+		"imgSrc": ["/assets/images/pc-4-removebg-preview.png","/assets/images/pc-4-1-removebg-preview.png","/assets/images/pc-4-2-removebg-preview.png"],
 		"rating": 5,
 		"price": 1600,
 		"category": "PC Gamer"
@@ -39,7 +39,7 @@
 		"id": 5,
 		"name": "HP Omen Gaming PC",
 		"description": "HP Omen with RTX 3060",
-		"imgSrc": "",
+		"imgSrc": ["/assets/images/pc-5-removebg-preview.png","/assets/images/pc-5-1-removebg-preview.png","/assets/images/pc-5-2-removebg-preview.png"],
 		"rating": 4,
 		"price": 1300,
 		"category": "PC Gamer"
@@ -48,7 +48,7 @@
 		"id": 6,
 		"name": "Lenovo Legion Gaming PC",
 		"description": "Lenovo Legion with AMD Ryzen 7",
-		"imgSrc": "",
+		"imgSrc":  ["/assets/images/pc-6-removebg-preview.png","/assets/images/pc-6-1-removebg-preview.png","/assets/images/pc-6-2-removebg-preview.png"],
 		"rating": 4,
 		"price": 1250,
 		"category": "PC Gamer"
@@ -57,7 +57,7 @@
 		"id": 7,
 		"name": "Dell G5 Gaming PC",
 		"description": "Dell G5 with Intel i7 and GTX 1660",
-		"imgSrc": "",
+		"imgSrc":  ["/assets/images/pc-7-removebg-preview.png","/assets/images/pc-7-1-removebg-preview.png","/assets/images/pc-7-2-removebg-preview.png"],
 		"rating": 4,
 		"price": 1100,
 		"category": "PC Gamer"
@@ -66,7 +66,7 @@
 		"id": 8,
 		"name": "Corsair One Gaming PC",
 		"description": "Compact PC with liquid cooling",
-		"imgSrc": "",
+		"imgSrc":  ["/assets/images/pc-8-removebg-preview.png","/assets/images/pc-8-1-removebg-preview.png","/assets/images/pc-8-2-removebg-preview.png"],
 		"rating": 5,
 		"price": 2000,
 		"category": "PC Gamer"
@@ -76,7 +76,7 @@
 		"id": 9,
 		"name": "Logitech G502 Mouse",
 		"description": "Gaming mouse with HERO sensor",
-		"imgSrc": "",
+		"imgSrc":  ["/assets/images/souris-1-removebg-preview.png","/assets/images/souris-1-1-removebg-preview.png","/assets/images/souris-1-2-removebg-preview.png"],
 		"rating": 5,
 		"price": 60,
 		"category": "Accessories"
@@ -85,7 +85,7 @@
 		"id": 10,
 		"name": "HyperX Cloud II Headset",
 		"description": "Gaming headset with surround sound",
-		"imgSrc": "",
+		"imgSrc": ["/assets/images/casque-1-removebg-preview.png","/assets/images/caspue-1-1-removebg-preview.png","/assets/images/casque-1-2-removebg-preview.png"],
 		"rating": 5,
 		"price": 90,
 		"category": "Accessories"
@@ -94,7 +94,7 @@
 		"id": 11,
 		"name": "Corsair K95 Keyboard",
 		"description": "Mechanical keyboard with RGB lighting",
-		"imgSrc": "",
+		"imgSrc": ["/assets/images/clavier-1-removebg-preview.png","/assets/images/clavier-1-1-removebg-preview.png","/assets/images/clavier-1-2-removebg-preview.png"],
 		"rating": 4,
 		"price": 150,
 		"category": "Accessories"
@@ -103,7 +103,7 @@
 		"id": 12,
 		"name": "Razer DeathAdder Mouse",
 		"description": "Ergonomic gaming mouse",
-		"imgSrc": "",
+		"imgSrc": ["/assets/images/souris-2-removebg-preview.png","/assets/images/souris-2-1-removebg-preview.png","/assets/images/souris-2-2-removebg-preview.png"],
 		"rating": 4,
 		"price": 70,
 		"category": "Accessories"
@@ -112,7 +112,7 @@
 		"id": 13,
 		"name": "SteelSeries Arctis Headset",
 		"description": "Wireless headset with retractable mic",
-		"imgSrc": "",
+		"imgSrc":["/assets/images/casque-2-removebg-preview.png","/assets/images/caspue-2-1-removebg-preview.png","/assets/images/casque-2-2-removebg-preview.png"],
 		"rating": 5,
 		"price": 120,
 		"category": "Accessories"
@@ -121,7 +121,7 @@
 		"id": 14,
 		"name": "Logitech G915 Keyboard",
 		"description": "Wireless mechanical keyboard",
-		"imgSrc": "",
+		"imgSrc": ["/assets/images/clavier-2-removebg-preview.png","/assets/images/clavier-2-1-removebg-preview.png","/assets/images/clavier-2-2-removebg-preview.png"],
 		"rating": 5,
 		"price": 200,
 		"category": "Accessories"
@@ -130,7 +130,7 @@
 		"id": 15,
 		"name": "SteelSeries Rival 600 Mouse",
 		"description": "Mouse with dual optical sensor",
-		"imgSrc": "",
+		"imgSrc": ["/assets/images/souris-3-removebg-preview.png","/assets/images/souris-3-1-removebg-preview.png","/assets/images/souris-3-2-removebg-preview.png"],
 		"rating": 4,
 		"price": 80,
 		"category": "Accessories"
@@ -139,7 +139,7 @@
 		"id": 16,
 		"name": "Razer Kraken Headset",
 		"description": "Immersive gaming headset",
-		"imgSrc": "",
+		"imgSrc": ["/assets/images/caspue-3-removebg-preview.png","/assets/images/caspue-3-1-removebg-preview.png","/assets/images/casque-3-2-removebg-preview.png"],
 		"rating": 4,
 		"price": 75,
 		"category": "Accessories"
@@ -147,72 +147,72 @@
 
 	{
 		"id": 17,
-		"name": "Playstation 5",
+		"name": "Xbox Series X|S Controller",
 		"description": "Next-gen gaming console",
-		"imgSrc": "",
+		"imgSrc": ["/assets/images/manette-1-removebg-preview.png","/assets/images/manette-1-1-removebg-preview.png","/assets/images/manette-1-2-removebg-preview.png"],
 		"rating": 5,
 		"price": 500,
 		"category": "Playstations"
 	},
 	{
 		"id": 18,
-		"name": "DualSense Controller",
+		"name": "DualSense (PS5)",
 		"description": "Wireless controller for PS5",
-		"imgSrc": "",
+		"imgSrc":  ["/assets/images/manette-2-removebg-preview.png","/assets/images/manette-2-1-removebg-preview.png","/assets/images/manette-2-2-removebg-preview.png"],
 		"rating": 5,
 		"price": 70,
 		"category": "Playstations"
 	},
 	{
 		"id": 19,
-		"name": "PS5 Pulse 3D Headset",
+		"name": "Nintendo Switch Pro Controller",
 		"description": "Wireless headset with 3D audio",
-		"imgSrc": "",
+		"imgSrc":  ["/assets/images/mnanette-3-removebg-preview.png","/assets/images/manette-3-1-removebg-preview.png","/assets/images/manette-3-2-removebg-preview.png"],
 		"rating": 4,
 		"price": 100,
 		"category": "Playstations"
 	},
 	{
 		"id": 20,
-		"name": "Spider-Man Miles Morales Game",
+		"name": "Razer Wolverine V2",
 		"description": "Exclusive game for PS5",
-		"imgSrc": "",
+		"imgSrc":  ["/assets/images/manette-4-removebg-preview.png","/assets/images/manette-4-1-removebg-preview.png","/assets/images/manette-4-2-removebg-preview.png"],
 		"rating": 5,
 		"price": 60,
 		"category": "Playstations"
 	},
 	{
 		"id": 21,
-		"name": "Demon's Souls Game",
+		"name": "SteelSeries Stratus+",
 		"description": "Remake for PS5",
-		"imgSrc": "",
+		"imgSrc":  ["/assets/images/manette-5-removebg-preview.png","/assets/images/manette-5-1-removebg-preview.png","/assets/images/manette-5-2-removebg-preview.png"],
 		"rating": 5,
 		"price": 70,
 		"category": "Playstations"
 	},
 	{
 		"id": 22,
-		"name": "DualSense Charging Station",
+		"name": "Logitech F310",
 		"description": "Dual controller charging station",
-		"imgSrc": "",
+		"imgSrc":  ["/assets/images/manette-6-removebg-preview.png","/assets/images/manette-6-1-removebg-preview.png","/assets/images/manette-6-2-removebg-preview.png"],
 		"rating": 4,
 		"price": 30,
 		"category": "Playstations"
 	},
 	{
 		"id": 23,
-		"name": "Playstation Camera",
+		"name": "8BitDo Pro 2",
 		"description": "Camera for streaming and AR",
-		"imgSrc": "",
+		"imgSrc":  ["/assets/images/manette-7-removebg-preview.png","/assets/images/manette-7-1-removebg-preview.png","/assets/images/manette-7-2-removebg-preview.png"],
 		"rating": 4,
 		"price": 50,
 		"category": "Playstations"
 	},
 	{
 		"id": 24,
-		"name": "PS5 Media Remote",
+		"name": "SCUF Infinity4PS",
 		"description": "Remote for multimedia control",
-		"imgSrc": "",
+		"imgSrc":  ["/assets/images/manette-8-removebg-preview.png","/assets/images/mnette-8-1-removebg-preview.png","/assets/images/manette-8-2-removebg-preview.png"],
 		"rating": 3,
 		"price": 25,
 		"category": "Playstations"
@@ -222,7 +222,7 @@
 		"id": 25,
 		"name": "DXRacer Chair",
 		"description": "Ergonomic gaming chair",
-		"imgSrc": "",
+		"imgSrc":  ["/assets/images/chaise-1-removebg-preview.png","/assets/images/chaise-1-1-removebg-preview.png","/assets/images/chaise-1-2-removebg-preview.png"],
 		"rating": 4,
 		"price": 300,
 		"category": "Chairs"
@@ -231,7 +231,7 @@
 		"id": 26,
 		"name": "Secretlab Titan Chair",
 		"description": "Chair with adjustable lumbar support",
-		"imgSrc": "",
+		"imgSrc": ["/assets/images/chaise-2-removebg-preview.png","/assets/images/chaise-2-1-removebg-preview.png","/assets/images/chaise-2-2-removebg-preview.png"],
 		"rating": 5,
 		"price": 350,
 		"category": "Chairs"
@@ -240,7 +240,7 @@
 		"id": 27,
 		"name": "Razer Iskur Chair",
 		"description": "Chair with adjustable lumbar support",
-		"imgSrc": "",
+		"imgSrc": ["/assets/images/chaise-3-removebg-preview.png","/assets/images/chaise-3-1-removebg-preview.png","/assets/images/chaise-3-2-removebg-preview.png"],
 		"rating": 5,
 		"price": 400,
 		"category": "Chairs"
@@ -249,7 +249,7 @@
 		"id": 28,
 		"name": "Noblechairs Hero Chair",
 		"description": "High-quality synthetic leather chair",
-		"imgSrc": "",
+		"imgSrc": ["/assets/images/chaise-4-removebg-preview.png","/assets/images/chaise-4-1-removebg-preview.png","/assets/images/chaise-4-2-removebg-preview.png"],
 		"rating": 4,
 		"price": 330,
 		"category": "Chairs"
@@ -258,7 +258,7 @@
 		"id": 29,
 		"name": "Corsair T3 Rush Chair",
 		"description": "Chair with soft fabric upholstery",
-		"imgSrc": "",
+		"imgSrc": ["/assets/images/chaise-5-removebg-preview.png","/assets/images/chaise-5-1-removebg-preview.png","/assets/images/chaise-5-2-removebg-preview.png"],
 		"rating": 4,
 		"price": 280,
 		"category": "Chairs"
@@ -267,7 +267,7 @@
 		"id": 30,
 		"name": "AKRacing Core Chair",
 		"description": "Chair with thick padding",
-		"imgSrc": "",
+		"imgSrc": ["/assets/images/chaise-6-removebg-preview.png","/assets/images/chaise-6-1-removebg-preview.png","/assets/images/chaise-6-2-removebg-preview.png"],
 		"rating": 3,
 		"price": 320,
 		"category": "Chairs"
@@ -276,7 +276,7 @@
 		"id": 31,
 		"name": "Cougar Armor One Chair",
 		"description": "Chair with steel frame",
-		"imgSrc": "",
+		"imgSrc": ["/assets/images/chaise-7-removebg-preview.png","/assets/images/chaise-7-1-removebg-preview.png","/assets/images/chaise-7-2-removebg-preview.png"],
 		"rating": 4,
 		"price": 290,
 		"category": "Chairs"
@@ -285,7 +285,7 @@
 		"id": 32,
 		"name": "Vertagear Racing Chair",
 		"description": "Chair with racing design",
-		"imgSrc": "",
+		"imgSrc": ["/assets/images/chaise-8-removebg-preview.png","/assets/images/chaise-8-1-removebg-preview.png","/assets/images/chaise-8-2-removebg-preview.png"],
 		"rating": 4,
 		"price": 340,
 		"category": "Chairs"
