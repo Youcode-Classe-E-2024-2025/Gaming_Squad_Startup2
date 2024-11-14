@@ -24,11 +24,14 @@ fetch("../../data/data.json")
 	.then((data) => {
 		if (localStorage.getItem("products")) {
 			products = JSON.parse(localStorage.getItem("products"));
+			console.log(products);
 		} else {
-			products = shuffle(data);
+			products = data;
+			console.log(products);
+
 			updateLocalStorage();
 		}
-		displayProducts(products);
+		afficherSlice();
 	})
 	.catch((error) => console.error(error));
 
@@ -127,3 +130,25 @@ function search() {
 	const searchedProducts = products.filter((product) => product.name.toLowerCase().includes(query));
 	displayProducts(searchedProducts);
 }
+
+let indexPage = 1;
+window.afficherSlice = function (element) {
+	if (element?.dataset.index) indexPage = Number(element.dataset.index);
+	console.log(indexPage);
+	console.log(element?.dataset.index);
+
+	const start = (indexPage - 1) * 16;
+	const end = indexPage * 16;
+	displayProducts(products.slice(start, end));
+	console.log(products.slice(start, end));
+};
+
+window.nextSlice = function () {
+	if (indexPage < 2) indexPage++;
+	afficherSlice();
+};
+
+window.previousSlice = function () {
+	if (indexPage > 1) indexPage--;
+	afficherSlice();
+};
