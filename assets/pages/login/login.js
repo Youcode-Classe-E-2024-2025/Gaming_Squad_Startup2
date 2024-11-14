@@ -32,4 +32,19 @@ signUpForm.addEventListener('submit', (e) => {
         signUpForm.reset();
     }
 });
+loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const userName = document.getElementById('userName').value;
+    const password = document.getElementById('Password').value;
 
+    const storedUser = localStorage.getItem("Username");
+    const storedPassword = localStorage.getItem("Password");
+    
+    if (userName === storedUser && password === storedPassword) {
+        alert("Connexion réussie");
+    } else if (userName === "admin" && password === "admin") {
+        window.location.pathname = '/assets/pages/products/products.html';
+    } else {
+        alert("Nom d'utilisateur ou mot de passe incorrect");
+    }
+});
