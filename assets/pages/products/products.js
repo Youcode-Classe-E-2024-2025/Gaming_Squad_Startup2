@@ -250,3 +250,31 @@ function getUpdatedData() {
 		category,
 	};
 }
+
+// sort
+const sortInput = document.getElementById('sort')
+
+sortInput.addEventListener('input',()=>{
+	// console.log(sortInput.value);
+	let sortedListe ;
+	if(sortInput.value =='name up'){
+		sortedListe = products.sort((p1,p2)=> p1.name < p2.name ? -1 :  1);
+	}else if(sortInput.value =='name down'){
+		 sortedListe = products.sort((p1,p2)=> p1.name > p2.name ? -1 :  1);
+	}else if(sortInput.value =='price up'){
+		sortedListe = products.sort((p1,p2)=> p1.price - p2.price);
+   }else if(sortInput.value =='price down'){
+	sortedListe = products.sort((p1,p2)=> p2.price - p1.price);
+}
+
+	console.log(sortedListe?.map(elm=>[elm.name,elm.price]));
+	
+
+})
+
+// filter
+const filterInput = document.getElementById('filter')
+
+filterInput.addEventListener('input',()=>{
+	// console.log(filterInput.value);
+})

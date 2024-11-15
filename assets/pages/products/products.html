@@ -77,14 +77,14 @@
 			</nav>
 	 
 		</header>
-		<main id="products" class="grid grid-cols-12 my-10">
+		<main id="products" class="grid grid-cols-12 mt-32 mb-10">
 			<section
 				class="products-controls mb-10 col-start-2 sm:col-start-3 md:col-start-2 xl:col-start-4 col-end-12 sm:col-end-11 md:col-end-12 xl:col-end-10 grid grid-cols-3 md:grid-cols-[repeat(3,auto),1fr] [&>*]:bg-white text-xs sm:text-sm [&_*]:text-inherit gap-2 sm:gap-4">
 				<button
 					class="add-product-btn px-1.5 py-1 border border-solid border-gray-700 rounded-[4px] active:scale-95">
 					Add <span class="hidden sm:inline-block mr-1">Product</span><i class="fa-solid fa-plus"></i>
 				</button>
-				<select class="filter px-1.5 py-1 border border-solid border-gray-700 rounded-[4px]">
+				<select id="filter" class="filter px-1.5 py-1 border border-solid border-gray-700 rounded-[4px]">
 					<option value="All" selected>filter</option>
 					<option value="PC Gamer">PC Gamer</option>
 					<option value="Accessories">Accessories</option>
