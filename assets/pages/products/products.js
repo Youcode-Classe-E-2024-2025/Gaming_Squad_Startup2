@@ -161,7 +161,14 @@ window.addProductToCart = function (event) {
 	console.log(cart);
 };
 
-window.openProductDetails = function (event) {};
+window.openProductDetails = function (event) {
+	const id = event.currentTarget.id;
+	const location = window.location;
+	const query = new URLSearchParams(location.search);
+	query.set("id", id);
+	const href = `${location.origin}/assets/pages/productDetails/productDetails.html?${query.toString()}`;
+	window.location.href = href;
+};
 
 function displayPagination() {
 	document.querySelector(".pagination")?.remove();
