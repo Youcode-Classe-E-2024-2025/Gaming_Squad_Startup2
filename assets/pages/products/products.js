@@ -5,9 +5,10 @@ import AddForm from "../../components/AddForm.js";
 
 let products = [];
 const productsWrapper = document.querySelector(".products-wrapper");
+// select main element to add in it AddForm component
 const main = document.querySelector("main");
 
-function updateLocalStorage() {
+function updateLocalStorageProducts() {
 	localStorage.setItem("products", JSON.stringify(products));
 }
 
@@ -18,9 +19,9 @@ fetch("../../data/data.json")
 			products = JSON.parse(localStorage.getItem("products"));
 		} else {
 			products = data;
-			updateLocalStorage();
+			updateLocalStorageProducts();
 		}
-		displayProducts(products);
+		afficherSlice();
 	})
 	.catch((error) => console.error(error));
 
@@ -64,12 +65,42 @@ function getFormData() {
 
 window.AddProduct = function (event) {
 	event.preventDefault();
+
 	const newProduct = getFormData();
-	products.push(newProduct);
-	updateLocalStorage();
-	displayProducts(products);
-	closeForm();
+	const isDataValid = validateData();
+	if (isDataValid) {
+		products.push(newProduct);
+		updateLocalStorageProducts();
+		displayProducts(products);
+		closeForm();
+	}
 };
+
+function validateData(event) {
+	const name = document.getElementById("name").value.trim();
+	const description = document.getElementById("description").value.trim();
+	const price = document.getElementById("price").value.trim();
+	const rating = document.getElementById("rating").value.trim();
+	const image = document.getElementById("image").value.trim();
+	let errorMessage = "";
+
+	if (name === "") {
+		errorMessage = "Please enter the product name.";
+	} else if (description === "") {
+		errorMessage = "Please enter the product description.";
+	} else if (price === "" || isNaN(price) || parseFloat(price) <= 0) {
+		errorMessage = "Please enter a valid price (greater than 0).";
+	} else if (rating === "" || isNaN(rating) || parseFloat(rating) < 0 || parseFloat(rating) > 5) {
+		errorMessage = "Please Enter a valid number in this range [0, 5].";
+	} else if (image === "" || !/^https?:\/\/.+/i.test(image)) {
+		errorMessage = "Please enter a valid image link.";
+	}
+
+	if (errorMessage) {
+		alert(errorMessage);
+		return false;
+	} else return true;
+}
 
 window.deleteProduct = function (event, element) {
 	event.stopPropagation();
@@ -77,7 +108,7 @@ window.deleteProduct = function (event, element) {
 	const index = products.findIndex((product) => product.id == id);
 	products.splice(index, 1);
 	displayProducts(products);
-	updateLocalStorage();
+	updateLocalStorageProducts();
 };
 
 const searchBar = document.querySelector("#search");
@@ -89,3 +120,43 @@ function search() {
 	const searchedProducts = products.filter((product) => product.name.toLowerCase().includes(query));
 	displayProducts(searchedProducts);
 }
+
+let indexPage = 1;
+window.afficherSlice = function (element) {
+	if (element?.dataset.index) indexPage = Number(element.dataset.index);
+
+	const start = (indexPage - 1) * 16;
+	const end = indexPage * 16;
+	displayProducts(products.slice(start, end));
+};
+
+window.nextSlice = function () {
+	if (indexPage < 2) indexPage++;
+	afficherSlice();
+};
+
+window.previousSlice = function () {
+	if (indexPage > 1) indexPage--;
+	afficherSlice();
+};
+
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function updateLocalStorageCart() {
+	localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+window.addProductToCart = function (event) {
+	event.preventDefault();
+	event.stopPropagation();
+	const id = event.currentTarget.dataset.id;
+	const product = products.find((prod) => prod.id == id);
+	const productIndexInCart = cart.findIndex((prod) => prod.id == id);
+	const isAlreadyInCart = productIndexInCart !== -1;
+	if (isAlreadyInCart) cart[productIndexInCart].quantity++;
+	else cart.push({ ...product, quantity: 1 });
+	updateLocalStorageCart();
+	console.log(cart);
+};
+
+window.openProductDetails = function (event) {};
