@@ -4,7 +4,7 @@ import EditForm from "../../components/EditForm.js";
 import AddForm from "../../components/AddForm.js";
 
 let products = [];
-let filteredListe=[];
+let filteredListe = [];
 const productsWrapper = document.querySelector(".products-wrapper");
 // select main element to add in it AddForm component
 const main = document.querySelector("main");
@@ -106,12 +106,15 @@ function validateData(event) {
 
 window.deleteProduct = function (event, element) {
 	event.stopPropagation();
-	const id = element.dataset.id;
-	const index = products.findIndex((product) => product.id == id);
-	products.splice(index, 1);
-	displayProductsSlice();
-	updateLocalStorageProducts();
-	displayPagination();
+	const confirm = prompt('Confirm your decision by clicking typing "YES"!');
+	if (confirm == "YES") {
+		const id = element.dataset.id;
+		const index = products.findIndex((product) => product.id == id);
+		products.splice(index, 1);
+		displayProductsSlice();
+		updateLocalStorageProducts();
+		displayPagination();
+	}
 };
 
 const searchBar = document.querySelector("#search");
@@ -127,7 +130,6 @@ function search() {
 let indexPage = 1;
 window.displayProductsSlice = function (element) {
 	if (element?.dataset.index) indexPage = Number(element.dataset.index);
-
 	const start = (indexPage - 1) * 16;
 	const end = indexPage * 16;
 	displayProducts(products.slice(start, end));
@@ -159,7 +161,6 @@ window.addProductToCart = function (event) {
 	if (isAlreadyInCart) cart[productIndexInCart].quantity++;
 	else cart.push({ ...product, quantity: 1 });
 	updateLocalStorageCart();
-	console.log(cart);
 };
 
 window.openProductDetails = function (event) {
@@ -195,15 +196,14 @@ function displayPagination() {
 	main.insertAdjacentHTML("beforeend", pagination);
 }
 
-
 // edit
 let idForUpdate;
 window.editProduct = function (event, element) {
 	event.stopPropagation();
 	const id = element.dataset.id;
-	idForUpdate=id;
+	idForUpdate = id;
 	const index = products.findIndex((product) => product.id == id);
-	openForm("edit"); 
+	openForm("edit");
 	showProductDataInForm(products[index]);
 
 	// displayProductsSlice();
@@ -212,12 +212,12 @@ window.editProduct = function (event, element) {
 };
 // closeForm()
 function showProductDataInForm(prdct) {
-	document.querySelector("#name").value = prdct.name ;
-	document.querySelector("#description").value = prdct.description ;
-	document.querySelector("#price").value = prdct.price ;
-	document.querySelector("#rating").value = prdct.rating ;
-	document.querySelector("#image").value = prdct.imgSrc ;
-	document.querySelector("#category").value = prdct.category ;
+	document.querySelector("#name").value = prdct.name;
+	document.querySelector("#description").value = prdct.description;
+	document.querySelector("#price").value = prdct.price;
+	document.querySelector("#rating").value = prdct.rating;
+	document.querySelector("#image").value = prdct.imgSrc;
+	document.querySelector("#category").value = prdct.category;
 }
 
 window.updateProduct = function (event) {
@@ -225,11 +225,11 @@ window.updateProduct = function (event) {
 	const updatedProduct = getUpdatedData();
 	const isDataValid = validateData();
 	if (isDataValid) {
-		updatedProduct.id=idForUpdate;
-	    const index = products.findIndex((product) => product.id == idForUpdate);
-		products.splice(index,1,updatedProduct)
+		updatedProduct.id = idForUpdate;
+		const index = products.findIndex((product) => product.id == idForUpdate);
+		products.splice(index, 1, updatedProduct);
 		displayProductsSlice();
-	updateLocalStorageProducts();
+		updateLocalStorageProducts();
 		closeForm();
 	}
 	displayPagination();
@@ -253,33 +253,33 @@ function getUpdatedData() {
 }
 
 // sort
-const sortInput = document.getElementById('sort')
+const sortInput = document.getElementById("sort");
 
-sortInput.addEventListener('input',()=>{
+sortInput.addEventListener("input", () => {
 	// console.log(sortInput.value);
-	
-	if(sortInput.value =='name up'){
-		 products.sort((p1,p2)=> p1.name < p2.name ? -1 :  1);
-	}else if(sortInput.value =='name down'){
-		  products.sort((p1,p2)=> p1.name > p2.name ? -1 :  1);
-	}else if(sortInput.value =='price up'){
-		 products.sort((p1,p2)=> p1.price - p2.price);
-   }else if(sortInput.value =='price down'){
-	 products.sort((p1,p2)=> p2.price - p1.price);
-}
-displayProductsSlice();
+
+	if (sortInput.value == "name up") {
+		products.sort((p1, p2) => (p1.name < p2.name ? -1 : 1));
+	} else if (sortInput.value == "name down") {
+		products.sort((p1, p2) => (p1.name > p2.name ? -1 : 1));
+	} else if (sortInput.value == "price up") {
+		products.sort((p1, p2) => p1.price - p2.price);
+	} else if (sortInput.value == "price down") {
+		products.sort((p1, p2) => p2.price - p1.price);
+	}
+	displayProductsSlice();
 	updateLocalStorageProducts();
-})
+});
 
 // filter
-const filterInput = document.getElementById('filter')
+const filterInput = document.getElementById("filter");
 
-filterInput.addEventListener('input',()=>{
+filterInput.addEventListener("input", () => {
 	// console.log(filterInput.value);
-	if(filterInput.value!=='All'){
-	filteredListe=products.filter(prdct=>prdct.category==filterInput.value);
-	displayProducts(filteredListe);
-    }else{
+	if (filterInput.value !== "All") {
+		filteredListe = products.filter((prdct) => prdct.category == filterInput.value);
+		displayProducts(filteredListe);
+	} else {
 		displayProductsSlice();
 	}
-})
+});
