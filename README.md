@@ -14,7 +14,7 @@
 - **Figma Brief:** [View on Figma](https://www.figma.com/design/WuHDx2K2kE2AyviiREzkqk/Untitled?node-id=10-185&t=mzOVUu3a7hKoG3wx-1)
 - **Figma Hight fédilité:**(https://www.figma.com/design/WuHDx2K2kE2AyviiREzkqk/Untitled?node-id=42-103&t=8QzGnxvr6luRuisY-1)
 - **GitHub Repository:** (https://github.com/Youcode-Classe-E-2024-2025/Gaming_Squad_Startup2.git)
-- **Hosted Page:** [View Live]
+- **Hosted Page:** (https://youcode-classe-e-2024-2025.github.io/Gaming_Squad_Startup2/)
 - **Color Palette:** [View Color Palette](https://coolors.co/palette/2b2d42-8d99ae-edf2f4-ef233c-d90429)
 
 ## Introduction
