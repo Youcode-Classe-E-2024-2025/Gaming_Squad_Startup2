@@ -77,7 +77,7 @@
 		</header>
 		<main id="products" class="grid grid-cols-12 my-10">
 			<section
-				class="products-controls mb-10 col-start-2 sm:col-start-3 md:col-start-2 xl:col-start-4 col-end-12 sm:col-end-11 md:col-end-12 xl:col-end-10 grid grid-cols-3 sm:grid-cols-[repeat(3,auto),1fr] [&>*]:bg-white text-xs sm:text-sm [&_*]:text-inherit gap-2 sm:gap-4">
+				class="products-controls mb-10 col-start-2 sm:col-start-3 md:col-start-2 xl:col-start-4 col-end-12 sm:col-end-11 md:col-end-12 xl:col-end-10 grid grid-cols-3 md:grid-cols-[repeat(3,auto),1fr] [&>*]:bg-white text-xs sm:text-sm [&_*]:text-inherit gap-2 sm:gap-4">
 				<button
 					class="add-product-btn px-1.5 py-1 border border-solid border-gray-700 rounded-[4px] active:scale-95">
 					Add <span class="hidden sm:inline-block mr-1">Product</span><i class="fa-solid fa-plus"></i>
@@ -107,17 +107,6 @@
 			</section>
 			<section
 				class="products-wrapper mb-5 col-start-2 xl:col-start-3 col-end-12 xl:col-end-11 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 lg:gap-10"></section>
-			<div
-				class="pagination mx-auto col-span-full text-xs sm:text-base flex items-center justify-center gap-2 w-48 [&>*]:rounded-full [&>*]:border-2 [&>*]:border-solid [&>*]:border-black [&>*]:aspect-square [&>*]:flex-1 [&>*]:flex [&>*]:justify-center [&>*]:items-center [&>*]:font-medium [&>*]:text-white">
-				<div class="left p-0.5 cursor-pointer" onclick="previousSlice()">
-					<i class="fa-solid fa-chevron-left font-black text-2xl"></i>
-				</div>
-				<p class="page-name cursor-pointer" data-index="1" onclick="afficherSlice(this)">1</p>
-				<p class="page-name cursor-pointer" data-index="2" onclick="afficherSlice(this)">2</p>
-				<div class="right p-0.5 cursor-pointer" onclick="nextSlice()">
-					<i class="fa-solid fa-chevron-right font-black text-2xl"></i>
-				</div>
-			</div>
 		</main>
 		<footer class="bg-black">
 			<div class="max-w-screen-xl mx-auto px-6 py-10">
