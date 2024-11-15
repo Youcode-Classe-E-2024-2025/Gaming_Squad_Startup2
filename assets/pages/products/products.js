@@ -4,6 +4,7 @@ import EditForm from "../../components/EditForm.js";
 import AddForm from "../../components/AddForm.js";
 
 let products = [];
+let filteredListe=[];
 const productsWrapper = document.querySelector(".products-wrapper");
 // select main element to add in it AddForm component
 const main = document.querySelector("main");
@@ -275,4 +276,10 @@ const filterInput = document.getElementById('filter')
 
 filterInput.addEventListener('input',()=>{
 	// console.log(filterInput.value);
+	if(filterInput.value!=='All'){
+	filteredListe=products.filter(prdct=>prdct.category==filterInput.value);
+	displayProducts(filteredListe);
+    }else{
+		displayProductsSlice();
+	}
 })
