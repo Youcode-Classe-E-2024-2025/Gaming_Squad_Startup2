@@ -21,7 +21,8 @@ fetch("../../data/data.json")
 			products = data;
 			updateLocalStorageProducts();
 		}
-		afficherSlice();
+		displayProductsSlice();
+		displayPagination();
 	})
 	.catch((error) => console.error(error));
 
@@ -50,7 +51,7 @@ function getFormData() {
 	const description = document.querySelector("#description").value;
 	const price = document.querySelector("#price").value;
 	const rating = document.querySelector("#rating").value;
-	const image = document.querySelector("#image").value;
+	const image = [document.querySelector("#image").value];
 	const category = document.querySelector("#category").value;
 	return {
 		id: Date.now(),
@@ -65,7 +66,6 @@ function getFormData() {
 
 window.AddProduct = function (event) {
 	event.preventDefault();
-
 	const newProduct = getFormData();
 	const isDataValid = validateData();
 	if (isDataValid) {
@@ -74,6 +74,7 @@ window.AddProduct = function (event) {
 		displayProducts(products);
 		closeForm();
 	}
+	displayPagination();
 };
 
 function validateData(event) {
@@ -107,8 +108,9 @@ window.deleteProduct = function (event, element) {
 	const id = element.dataset.id;
 	const index = products.findIndex((product) => product.id == id);
 	products.splice(index, 1);
-	displayProducts(products);
+	displayProductsSlice();
 	updateLocalStorageProducts();
+	displayPagination();
 };
 
 const searchBar = document.querySelector("#search");
@@ -122,7 +124,7 @@ function search() {
 }
 
 let indexPage = 1;
-window.afficherSlice = function (element) {
+window.displayProductsSlice = function (element) {
 	if (element?.dataset.index) indexPage = Number(element.dataset.index);
 
 	const start = (indexPage - 1) * 16;
@@ -131,13 +133,13 @@ window.afficherSlice = function (element) {
 };
 
 window.nextSlice = function () {
-	if (indexPage < 2) indexPage++;
-	afficherSlice();
+	if (indexPage < Math.ceil(products.length / 16)) indexPage++;
+	displayProductsSlice();
 };
 
 window.previousSlice = function () {
 	if (indexPage > 1) indexPage--;
-	afficherSlice();
+	displayProductsSlice();
 };
 
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -160,3 +162,27 @@ window.addProductToCart = function (event) {
 };
 
 window.openProductDetails = function (event) {};
+
+function displayPagination() {
+	document.querySelector(".pagination")?.remove();
+	const numberOfPages = Math.ceil(products.length / 16);
+
+	let bullets = "";
+
+	for (let i = 1; i <= numberOfPages; i++) {
+		bullets += `<p class="page-name cursor-pointer" data-index="${i}" onclick="displayProductsSlice(this)">${i}</p>`;
+	}
+
+	const pagination = `<div
+				class="pagination mx-auto col-span-full text-xs sm:text-base flex items-center justify-center gap-2 w-fit [&>*]:rounded-full [&>*]:border-2 [&>*]:border-solid [&>*]:border-black [&>*]:aspect-square [&>*]:w-8 [&>*]:h-8 [&>*]:flex [&>*]:justify-center [&>*]:items-center [&>*]:font-medium [&>*]:text-white">
+				<div class="left p-0.5 cursor-pointer !w-9 !h-9" onclick="previousSlice()">
+					<i class="fa-solid fa-chevron-left font-black text-2xl"></i>
+				</div>
+				${bullets}
+				<div class="right p-0.5 cursor-pointer !w-9 !h-9" onclick="nextSlice()">
+					<i class="fa-solid fa-chevron-right font-black text-2xl"></i>
+				</div>
+			</div>`;
+
+	main.insertAdjacentHTML("beforeend", pagination);
+}
