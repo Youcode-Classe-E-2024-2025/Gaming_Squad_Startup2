@@ -57,7 +57,7 @@
 		"id": 7,
 		"name": "Dell G5 Gaming PC",
 		"description": "Dell G5 with Intel i7 and GTX 1660",
-		"imgSrc":  ["/assets/images/pc-7-removebg-preview (1).png","/assets/images/pc-7-1-removebg-preview.png","/assets/images/pc-7-2-removebg-preview.png"],
+		"imgSrc":  ["/assets/images/pc-7-removebg-preview (2).png","/assets/images/pc-7-1-removebg-preview.png","/assets/images/pc-7-2-removebg-preview.png"],
 		"rating": 4,
 		"price": 1100,
 		"category": "PC Gamer"
