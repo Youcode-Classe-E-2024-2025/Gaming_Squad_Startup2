@@ -1,7 +1,7 @@
 export default function (product) {
 	return `<figure class="product-card relative cursor-pointer" id="${product?.id}" onclick="openProductDetails(event)">
 					<div class="box absolute top-0 right-1.5 z-10">
-						<button data-id="${product?.id}" onclick="editProduct()" class="edit-btn text-sm mr-1 hover:scale-125 transition-transform duration-300">
+						<button data-id="${product?.id}" onclick="editProduct(event,this)" class="edit-btn text-sm mr-1 hover:scale-125 transition-transform duration-300">
 							<i class="fa-regular fa-pen-to-square"></i>
 						</button>
 						<button data-id="${product?.id}" onclick="deleteProduct(event, this)" class="delete-btn text-sm hover:scale-125 transition-transform duration-300">
