@@ -227,8 +227,8 @@ window.updateProduct = function (event) {
 		updatedProduct.id=idForUpdate;
 	    const index = products.findIndex((product) => product.id == idForUpdate);
 		products.splice(index,1,updatedProduct)
-		updateLocalStorageProducts();
-		displayProducts(products);
+		displayProductsSlice();
+	updateLocalStorageProducts();
 		closeForm();
 	}
 	displayPagination();
@@ -256,20 +256,18 @@ const sortInput = document.getElementById('sort')
 
 sortInput.addEventListener('input',()=>{
 	// console.log(sortInput.value);
-	let sortedListe ;
-	if(sortInput.value =='name up'){
-		sortedListe = products.sort((p1,p2)=> p1.name < p2.name ? -1 :  1);
-	}else if(sortInput.value =='name down'){
-		 sortedListe = products.sort((p1,p2)=> p1.name > p2.name ? -1 :  1);
-	}else if(sortInput.value =='price up'){
-		sortedListe = products.sort((p1,p2)=> p1.price - p2.price);
-   }else if(sortInput.value =='price down'){
-	sortedListe = products.sort((p1,p2)=> p2.price - p1.price);
-}
-
-	console.log(sortedListe?.map(elm=>[elm.name,elm.price]));
 	
-
+	if(sortInput.value =='name up'){
+		 products.sort((p1,p2)=> p1.name < p2.name ? -1 :  1);
+	}else if(sortInput.value =='name down'){
+		  products.sort((p1,p2)=> p1.name > p2.name ? -1 :  1);
+	}else if(sortInput.value =='price up'){
+		 products.sort((p1,p2)=> p1.price - p2.price);
+   }else if(sortInput.value =='price down'){
+	 products.sort((p1,p2)=> p2.price - p1.price);
+}
+displayProductsSlice();
+	updateLocalStorageProducts();
 })
 
 // filter
