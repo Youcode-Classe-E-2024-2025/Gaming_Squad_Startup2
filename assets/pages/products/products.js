@@ -186,3 +186,60 @@ function displayPagination() {
 
 	main.insertAdjacentHTML("beforeend", pagination);
 }
+
+
+// edit
+let idForUpdate;
+window.editProduct = function (event, element) {
+	event.stopPropagation();
+	const id = element.dataset.id;
+	idForUpdate=id;
+	const index = products.findIndex((product) => product.id == id);
+	openForm("edit"); 
+	showProductDataInForm(products[index]);
+
+	// displayProductsSlice();
+	// updateLocalStorageProducts();
+	// displayPagination();
+};
+// closeForm()
+function showProductDataInForm(prdct) {
+	document.querySelector("#name").value = prdct.name ;
+	document.querySelector("#description").value = prdct.description ;
+	document.querySelector("#price").value = prdct.price ;
+	document.querySelector("#rating").value = prdct.rating ;
+	document.querySelector("#image").value = prdct.imgSrc ;
+	document.querySelector("#category").value = prdct.category ;
+}
+
+window.updateProduct = function (event) {
+	event.preventDefault();
+	const updatedProduct = getUpdatedData();
+	const isDataValid = validateData();
+	if (isDataValid) {
+		updatedProduct.id=idForUpdate;
+	    const index = products.findIndex((product) => product.id == idForUpdate);
+		products.splice(index,1,updatedProduct)
+		updateLocalStorageProducts();
+		displayProducts(products);
+		closeForm();
+	}
+	displayPagination();
+};
+
+function getUpdatedData() {
+	const name = document.querySelector("#name").value;
+	const description = document.querySelector("#description").value;
+	const price = document.querySelector("#price").value;
+	const rating = document.querySelector("#rating").value;
+	const image = [document.querySelector("#image").value];
+	const category = document.querySelector("#category").value;
+	return {
+		imgSrc: image,
+		name,
+		description,
+		price,
+		rating,
+		category,
+	};
+}
