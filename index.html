@@ -250,7 +250,7 @@
             <h2 class="text-center font-semibold text-white text-5xl py-20 ">Our category</h2>
             <div>
                 <div class="max-w-[66.5rem] flex flex-wrap justify-center gap-11 mx-auto">
-                    <button onclick="categoryHandler(1)"
+                    <button data-category="Chairs" onclick="categoryHandler(event)"
                         class="relative bg-white rounded-full w-32 h-32 md:w-40 md:h-40 border-4 border-transparent overflow-hidden hover:scale-[1.01] hover:border-rose-400">
                         <img class="w-full h-full object-contain p-2" src="./assets/images/home_images/Gaming-Chairs.avif"
                             alt="">
@@ -258,7 +258,7 @@
                             class="absolute top-0 right-0 p-4 text-white font-semibold h-full w-full bg-[#ff3f2a5a] opacity-0 hover:opacity-100 flex justify-center items-center ">Gaming
                             Chairs</span>
                     </button>
-                    <button onclick="categoryHandler(1)"
+                    <button data-category="Playstations" onclick="categoryHandler(event)"
                         class="relative bg-white rounded-full w-32 h-32 md:w-40 md:h-40 border-4 border-transparent overflow-hidden hover:scale-[1.01] hover:border-rose-400">
                         <img class="w-full h-full object-contain p-3" src="./assets/images/home_images/best-product-1.jpg"
                             alt="">
@@ -266,7 +266,7 @@
                             class="absolute top-0 right-0 p-4 text-white font-semibold h-full w-full bg-[#ff3f2a5a] opacity-0 hover:opacity-100 flex justify-center items-center ">
                             Console Gaming</span>
                     </button>
-                    <button onclick="categoryHandler(1)"
+                    <button data-category="PC Gamer" onclick="categoryHandler(event)"
                         class="relative bg-white rounded-full w-32 h-32 md:w-40 md:h-40 border-4 border-transparent overflow-hidden hover:scale-[1.01] hover:border-rose-400">
                         <img class="w-full h-full object-contain p-2" src="./assets/images/home_images/Pc-gamer.webp"
                             alt="">
@@ -274,7 +274,7 @@
                             class="absolute top-0 right-0 p-4 text-white font-semibold h-full w-full bg-[#ff3f2a5a] opacity-0 hover:opacity-100 flex justify-center items-center ">PC
                             Gamer</span>
                     </button>
-                    <button onclick="categoryHandler(1)"
+                    <button data-category="Accessories" onclick="categoryHandler(event)"
                         class="relative bg-white rounded-full w-32 h-32 md:w-40 md:h-40 border-4 border-transparent overflow-hidden hover:scale-[1.01] hover:border-rose-400">
                         <img class="w-full h-full object-contain p-2" src="./assets/images/home_images/pc-accsesoire.jpg"
                             alt="">
@@ -404,26 +404,26 @@
                 <div>
                     <h3 class="my-2 text-orange font-semibold text-xl">short links</h3>
                     <ul class="ml-4">
-                        <li class="hover:scale-105 hover:text-orange"><a href="">home</a></li>
-                        <li class="hover:scale-105 hover:text-orange"><a href="">products list</a></li>
-                        <li class="hover:scale-105 hover:text-orange"><a href="">about us</a></li>
-                        <li class="hover:scale-105 hover:text-orange"><a href="">contact us</a></li>
+                        <li class="hover:scale-105 hover:text-orange"><a href="#">home</a></li>
+                        <li class="hover:scale-105 hover:text-orange"><a href="./assets/pages/products/products.html">products list</a></li>
+                        <li class="hover:scale-105 hover:text-orange"><a href="#about">about us</a></li>
+                        <li class="hover:scale-105 hover:text-orange"><a href="#contact">contact us</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="my-2 text-orange font-semibold text-xl">category</h3>
                     <ul class="ml-4">
-                        <li class="hover:scale-105 hover:text-orange"><a href="">Gaming Chairs</a></li>
-                        <li class="hover:scale-105 hover:text-orange"><a href="">Console Gaming</a></li>
-                        <li class="hover:scale-105 hover:text-orange"><a href="">PC Gamer</a></li>
-                        <li class="hover:scale-105 hover:text-orange"><a href="">Gaming Accessories</a></li>
+                        <li class="hover:scale-105 hover:text-orange"><button data-category="Chairs" onclick="categoryHandler(event)" >Gaming Chairs</button></li>
+                        <li class="hover:scale-105 hover:text-orange"><button data-category="Playstations" onclick="categoryHandler(event)">Console Gaming</button></li>
+                        <li class="hover:scale-105 hover:text-orange"><button data-category="PC Gamer" onclick="categoryHandler(event)">PC Gamer</button></li>
+                        <li class="hover:scale-105 hover:text-orange"><button data-category="Accessories" onclick="categoryHandler(event)">Gaming Accessories</button></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="my-2 text-orange font-semibold text-xl">join us</h3>
                     <ul class="ml-4">
-                        <li class="hover:scale-105 hover:text-orange"><a href="">log in</a></li>
-                        <li class="hover:scale-105 hover:text-orange"><a href="">sign in</a></li>
+                        <li class="hover:scale-105 hover:text-orange"><a href="./assets/pages/login/login.html">log in</a></li>
+                        <li class="hover:scale-105 hover:text-orange"><a href="./assets/pages/login/login.html">sign in</a></li>
                         <li class="hover:scale-x-105">
                             <div
                                 class="relative flex items-center w-full h-10 border-2 border-x-white rounded-full  focus-within:shadow-lg bg-transparent overflow-hidden my-4">
@@ -431,13 +431,13 @@
                                 <input placeholder="search"
                                     class="peer h-full w-full outline-none bg-transparent text-sm text-white px-4"
                                     type="search" name="footerSearchBar" id="footerSearchBar">
-                                <div class="grid place-items-center h-full w-12 text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                <button class="grid place-items-center h-full w-12 text-gray-300" onclick="searchHandler(event)">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6  hover:fill-orange" fill="none"
                                         viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                     </svg>
-                                </div>
+                                </button>
                             </div>
                              
                         </li>

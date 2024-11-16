@@ -148,5 +148,23 @@ const rightBtn = document.getElementById("right-carousel-btn");
 // const carouselContent = document.getElementById("carousel-content");
 
 
+// categoryHandler
 
-
+window.categoryHandler = function (event) { 
+    const id = event.currentTarget.dataset.category
+	const location = window.location;
+	const query = new URLSearchParams(location.search);
+    query.set("category", id);
+	const href = `${location.origin}/assets/pages/products/products.html?${query.toString()}`;
+	window.location.href = href;
+};
+// footer search
+// searchHandler
+window.searchHandler = function (event) {  
+    const searchValue= document.getElementById('footerSearchBar').value.trim();
+	const location = window.location;
+	const query = new URLSearchParams(location.search);
+    query.set("search", searchValue);
+	const href = `${location.origin}/assets/pages/products/products.html?${query.toString()}`;
+	window.location.href = href;
+};
