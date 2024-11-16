@@ -7,10 +7,17 @@ function updateLocalStorageCart() {
 }
 
 function displayCart() {
-	if (cart.length > 0) cartContainer.innerHTML = cart.map((product) => CartItem(product)).join("");
-	else
+	if (cart.length > 0) {
+		document.querySelector(".n-items").style.display = "block";
+		document.querySelector(".n-items span").textContent = cart.length;
+		cartContainer.innerHTML = cart.map((product) => CartItem(product)).join("");
+		document.querySelector(".pay-btn").style.display = "block";
+	} else {
+		document.querySelector(".n-items").style.display = "none";
 		cartContainer.innerHTML =
 			"<p class='text-red text-center text-xl font-medium uppercase'>--- the cart is empty ---</p>";
+		document.querySelector(".pay-btn").style.display = "none";
+	}
 }
 displayCart();
 
