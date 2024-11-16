@@ -68,6 +68,22 @@ burgerIcon.addEventListener('click',()=> {navbar.classList.toggle('hidden')});
 //     welcomeSection.innerHTML='';
 //     welcomeSection.append(Div);
 // }
+fetch("./assets/data/data.json")
+	.then((res) => res.json())
+	.then((data) => {
+		if (localStorage.getItem("products")) {
+			products = JSON.parse(localStorage.getItem("products"));
+		} else {
+			products = data;
+            localStorage.setItem("products", JSON.stringify(products));
+
+		}
+	
+	})
+	.catch((error) => console.error(error));
+
+
+
 function replaceCartWlcm(index){
 
     const item= wlcmData[index]
@@ -94,7 +110,7 @@ function welcomeSectionHandler(){
         replaceCartWlcm((i++)%3)
      }, 3000);
 }
-welcomeSectionHandler();
+console.log(window.location.pathname);
 
 // carousel best products 
 const leftBnt =document.getElementById('left-carousel-btn');

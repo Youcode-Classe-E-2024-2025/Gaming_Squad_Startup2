@@ -1,328 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-			rel="stylesheet" />
-		<title>product details</title>
-		<!-- <script src="https://cdn.tailwindcss.com"></script> -->
-		<link rel="stylesheet" href="./../../css/style.css" />
-	</head>
-	<body class="p-0 m-0 bg-gradient-to-b from-black via-slate-900 to-slate-400">
-		<header class="fixed z-20 top-0 right-0 w-full">
-			<nav class="bg-white h-24">
-				<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-6 py-10">
-					<a href="#" class="text-black font-logo text-4xl"> Game<span class="text-red">Rig</span> </a>
-					<button
-						id="burger-icon"
-						type="button"
-						class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-rose-200 focus:outline-none focus:ring-2 focus:ring-roce-200"
-						aria-controls="navbar-default"
-						aria-expanded="false">
-						<span class="sr-only">Open main menu</span>
-						<svg
-							class="w-5 h-5"
-							aria-hidden="true"
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 17 14">
-							<path
-								stroke="currentColor"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M1 1h15M1 7h15M1 13h15" />
-						</svg>
-					</button>
-					<!-- hidden -->
-					<div class="hidden w-full md:block md:w-auto" id="navbar-default">
-						<ul
-							class="font-medium flex flex-col items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
-							<li class="w-full md:w-auto">
-								<a
-									href="./../../../index.html"
-									class="block py-2 px-3 text-white bg-red rounded md:bg-transparent md:text-red md:font-semibold text-[1.25rem] md:p-0 hover:scale-[1.01] md:hover:scale-110 transition-transform"
-									aria-current="page"
-									>Home</a
-								>
-							</li>
-							<li class="w-full md:w-auto">
-								<a
-									href="./../products/products.html"
-									class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:scale-[1.01] md:hover:scale-110 transition-transform md:hover:text-red md:p-0"
-									>Products</a
-								>
-							</li>
-							<li class="w-full md:w-auto">
-								<a
-									href="#contact"
-									class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:scale-[1.01] md:hover:scale-110 transition-transform md:hover:text-red md:p-0"
-									>Contact Us</a
-								>
-							</li>
-							<li class="w-full md:w-auto">
-								<a
-									href="#about"
-									class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:scale-[1.01] md:hover:scale-110 transition-transform md:hover:text-red md:p-0"
-									>About Us</a
-								>
-							</li>
-							<li class="flex justify-around w-full md:w-auto md:gap-8 md:justify-center">
-								<a role="button" href="./assets/pages/cart/cart.html" class="hover:scale-110 transition-all">
-									<span class="sr-only">go to cart </span>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke-width="1.5"
-										stroke="currentColor"
-										class="size-8">
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-									</svg>
-								</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>product details</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="./../../css/style.css">
+</head>
+<body class="p-0 m-0 bg-gradient-to-b from-black via-slate-900 to-slate-400">
+    <header class="fixed z-20 top-0 right-0 w-full">
 
-								<a role="button" href="./assets/pages/cart/cart.html" class="hover:scale-110 transition-all">
-									<span class="sr-only">login</span>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke-width="1.5"
-										stroke="currentColor"
-										class="size-8">
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
-									</svg>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</header>
-		<section class="flex flex-col md:grid md:grid-cols-12 md:gap-4 md:flex-row items-center md:items-start mt-10">
-			<div class="flex flex-col md:col-start-2 md:col-span-5">
-				<div class="w-full text-center mt-[16px]">
-					<h1 class="text-[6vw] mx-auto md:hidden md:ml-0 static text-[#EDF2F4]">Gamdias Aphrodite ML1</h1>
-				</div>
-				<div
-					class="w-[70vw] md:w-full md:ml-0 flex items-center md:h-[400px] h-[70vw] mt-[30px] md:mt-[70px] bg-[#EEEEEE]">
-					<img id="img-prancipal" class="object-contain h-full w-full" src="" alt="no pic" />
-				</div>
-				<div class="flex md:grid md:grid-cols-5 md:gap-4 flex-row mt-[20px] md:mt-[29px]">
-					<div class="bg-[#EEE] h-[21vw] w-[21vw] cursor-pointer md:h-full md:w-full md:ml-0 md:col-start-2">
-						<button><img id="img-1" src="" alt="" /></button>
-					</div>
-					<div
-						class="bg-[#EEE] h-[21vw] w-[21vw] cursor-pointer ml-[3.5vw] md:h-full md:w-full md:ml-0 md:col-start-3">
-						<button><img id="img-2" src="" alt="" /></button>
-					</div>
-					<div
-						class="bg-[#EEE] h-[21vw] w-[21vw] cursor-pointer ml-[3.5vw] md:h-full md:w-full md:ml-0 md:col-start-4">
-						<button><img id="img-3" src="" /></button>
-					</div>
-				</div>
-			</div>
-			<div
-				class="flex md:items-start md:col-start-8 md:col-span-4 items-center flex-col mt-[10px] md:mt-[70px] md:ml-0">
-				<h1 id="titre" class="text-[32px] max-md:hidden static w-auto h-auto text-[#EDF2F4] sm:text-[2.5vw]">
-					Gamdias Aphrodite ML1
-				</h1>
-				<div class="flex flex-row md:flex-col">
-					<div id="stars" class="md:mt-5 mt-6">
-						<img
-							class="inline w-[4vw] h-[4vw] md:w-[2vw] md:h-[2vw]"
-							src="https://img.icons8.com/fluency/48/star--v1.png"
-							alt="" />
-						<img
-							class="inline w-[4vw] h-[4vw] md:w-[2vw] md:h-[2vw]"
-							src="https://img.icons8.com/fluency/48/star--v1.png"
-							alt="" />
-						<img
-							class="inline w-[4vw] h-[4vw] md:w-[2vw] md:h-[2vw]"
-							src="https://img.icons8.com/fluency/48/star--v1.png"
-							alt="" />
-						<img
-							class="inline w-[4vw] h-[4vw] md:w-[2vw] md:h-[2vw]"
-							src="https://img.icons8.com/fluency/48/star--v1.png"
-							alt="" />
-						<img
-							class="inline w-[4vw] h-[4vw] md:w-[2vw] md:h-[2vw]"
-							src="https://img.icons8.com/ios-filled/50/737373/star--v1.png"
-							alt="" />
-					</div>
-					<div>
-						<p
-							id="prix"
-							class="w-auto h-full md:mt-[35px] md:text-[40px] ml-20 md:ml-0 text-[6vw] text-[#C7CAD1]">
-							99.99$
-						</p>
-					</div>
-				</div>
-				<!-- hna -->
-				<p id="desc" class="md:w-full w-[50vw] md:mt-[35px] line-clamp-2 h-full mt-[17px] text-[#C7CAD1]">
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam harum non explicabo earum Lorem ipsum
-					dolor sit amet consectetur, adipisicing elit. Molestias iure fugit vel error, reprehenderit quibusdam
-					culpa veritatis porro repudiandae maiores!
-				</p>
-				<div class="flex flex-row mt-[35px]">
-					<div class="flex md:grid md:grid-cols-4 md:gap-4 items-center flex-row mt-">
-						<div class="flex flex-row md:col-span-2">
-							<button id="moin" class="bg-black h-[9vw] w-[12vw] md:h-[48px] md:w-[50px] text-white text-2xl">
-								-
-							</button>
-							<input
-								id="contiti"
-								type="text"
-								value="1"
-								class="quantity bg-[#D9D9D9] h-[9vw] w-[12vw] md:h-[48px] text-center md:w-[50px]" />
-							<button id="plus" class="bg-black h-[9vw] w-[12vw] md:h-[48px] md:w-[50px] text-white">+</button>
-						</div>
-						<div class="col-span-2">
-							<button
-								class="add-to-cart w-[40vw] h-[10vw] md:w-full md:h-[48px] bg-[#F04D0D] ml-[17px] md:ml-[6.2vw] rounded-[8px] text-[#EDF2F4]">
-								add to card
-							</button>
-						</div>
-					</div>
-				</div>
-				<div class="w-[90vw] h-[22vw] md:w-full md:h-[14vw] border border-solid border-white mt-[24px]">
-					<div class="flex flex-row">
-						<img
-							class="mr-3 w-[10vw] md:mr-8 md:w-[5vw] h-[7vw] md:h-[30px] ml-2"
-							src="https://img.icons8.com/?size=100&id=vUX3MkI7D7xW&format=png&color=000000"
-							alt="" />
-						<div>
-							<p class="text-[#C7CAD1] text-[12px] md:text-[2.2vw]">Free Delivery</p>
-							<p class="text-[#C7CAD1] opacity-70 text-[10px] md:text-[1.1vw]">
-								Enter your postal code for Delivery Availability
-							</p>
-						</div>
-					</div>
-					<hr />
-					<div class="flex flex-row">
-						<img
-							class="mr-3 w-[10vw] md:w-[5vw] md:mr-7 md:h-[5vw] h-[8vw] ml-2 md:mt-[5px]"
-							src="https://img.icons8.com/?size=100&id=121812&format=png&color=000000"
-							alt="" />
-						<div>
-							<p class="text-[#C7CAD1] text-[12px] md:text-[2.2vw]">Free Delivery</p>
-							<p class="text-[#C7CAD1] opacity-70 text-[10px] md:text-[1.1vw]">
-								Enter your postal code for Delivery Availability
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<footer class="bg-black mt-7">
-			<div class="max-w-screen-xl mx-auto px-6 py-10">
-				<div class="logo my-4">
-					<a href="./index.html" class="text-white font-logo text-4xl"> Game<span class="text-red">Rig</span> </a>
-				</div>
-				<div class="flex gap-10 flex-wrap mx-10 items-center text-white justify-between md:mx-20">
-					<div>
-						<h3 class="my-2 text-orange font-semibold text-xl">short links</h3>
-						<ul class="ml-4">
-							<li class="hover:scale-105 hover:text-orange"><a href="">home</a></li>
-							<li class="hover:scale-105 hover:text-orange"><a href="">products list</a></li>
-							<li class="hover:scale-105 hover:text-orange"><a href="">about us</a></li>
-							<li class="hover:scale-105 hover:text-orange"><a href="">contact us</a></li>
-						</ul>
-					</div>
-					<div>
-						<h3 class="my-2 text-orange font-semibold text-xl">category</h3>
-						<ul class="ml-4">
-							<li class="hover:scale-105 hover:text-orange"><a href="">Gaming Chairs</a></li>
-							<li class="hover:scale-105 hover:text-orange"><a href="">Console Gaming</a></li>
-							<li class="hover:scale-105 hover:text-orange"><a href="">PC Gamer</a></li>
-							<li class="hover:scale-105 hover:text-orange"><a href="">Gaming Accessories</a></li>
-						</ul>
-					</div>
-					<div>
-						<h3 class="my-2 text-orange font-semibold text-xl">join us</h3>
-						<ul class="ml-4">
-							<li class="hover:scale-105 hover:text-orange"><a href="">log in</a></li>
-							<li class="hover:scale-105 hover:text-orange"><a href="">sign in</a></li>
-							<li class="hover:scale-x-105">
-								<div
-									class="relative flex items-center w-full h-10 border-2 border-x-white rounded-full focus-within:shadow-lg bg-transparent overflow-hidden my-4">
-									<label class="sr-only" for="footerSearchBar">search bar </label>
-									<input
-										placeholder="search"
-										class="peer h-full w-full outline-none bg-transparent text-sm text-white px-4"
-										type="search"
-										name="footerSearchBar"
-										id="footerSearchBar" />
-									<div class="grid place-items-center h-full w-12 text-gray-300">
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											class="h-6 w-6"
-											fill="none"
-											viewBox="0 0 24 24"
-											stroke="currentColor">
-											<path
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												stroke-width="2"
-												d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-										</svg>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="mt-10 flex justify-center items-center gap-10">
-					<div>
-						<svg
-							class="fill-gray-300 hover:fill-orange hover:scale-105 w-6"
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 512 512">
-							<path
-								d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
-						</svg>
-					</div>
-					<div>
-						<svg
-							class="fill-gray-300 hover:fill-orange hover:scale-105 w-6"
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 448 512">
-							<path
-								d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-						</svg>
-					</div>
-					<div>
-						<svg
-							class="fill-gray-300 hover:fill-orange hover:scale-105 w-6"
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 576 512">
-							<path
-								d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
-						</svg>
-					</div>
-					<div>
-						<svg
-							class="fill-gray-300 hover:fill-orange hover:scale-105 w-6"
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 448 512">
-							<path
-								d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
-						</svg>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<script src="/assets/pages/productDetails/productDetails.js"></script>
-		<script src="./../../../main.js"></script>
-	</body>
+        <nav class="bg-white h-24">
+            <div class="max-w-screen-xl flex h-full flex-wrap items-center justify-between mx-auto  px-10">
+                <a href="../../../index.html" class=" text-black font-logo text-4xl">
+
+                    Game<span class="text-red">Rig</span>
+                </a>
+                <button id="burger-icon" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-rose-200 focus:outline-none focus:ring-2 focus:ring-roce-200   "
+                    aria-controls="navbar-default" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+                <!-- hidden -->
+                <div class=" hidden w-full md:block md:w-auto" id="navbar-default">
+                    <ul
+                        class="font-medium flex flex-col   items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+                        <li class=" w-full md:w-auto">
+                            <a href="../../../index.html"
+                                class="block py-2 px-3 text-white bg-red rounded md:bg-transparent md:text-red md:font-semibold text-[1.25rem]  md:p-0  hover:scale-[1.01] md:hover:scale-110 transition-transform"
+                                aria-current="page">Home</a>
+                        </li>
+                        <li class=" w-full md:w-auto">
+                            <a href="../products/products.html"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  hover:scale-[1.01] md:hover:scale-110 transition-transform md:hover:text-red md:p-0  ">Products</a>
+                        </li>
+                        <li class=" w-full md:w-auto">
+                            <a href="../../../index.html#contact"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  hover:scale-[1.01] md:hover:scale-110 transition-transform md:hover:text-red md:p-0  ">Contact
+                                Us</a>
+                        </li>
+                        <li class=" w-full md:w-auto">
+                            <a href="../../../index.html#about"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  hover:scale-[1.01] md:hover:scale-110 transition-transform md:hover:text-red md:p-0  ">About
+                                Us</a>
+                        </li>
+                        <li class="flex justify-around w-full md:w-auto md:gap-8 md:justify-center ">
+                            <a role="button" href="../cart/cart.html"
+                                class="hover:scale-110 relative transition-all">
+                                <span class="sr-only">go to cart </span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-8">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                </svg>
+                                <div id="cartNum" class="absolute right-0 flex items-center justify-center w-3.5 h-3.5 rounded-full top-3 bg-red text-[14px]">0
+                                </div>
+                      
+
+                            </a>  
+
+                            <a role="button" href="../login/login.html"
+                                class="hover:scale-110 transition-all">
+                                <span class="sr-only">login</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-8">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+                                </svg>
+
+
+                            </a>
+ 
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <section class="flex flex-col md:grid md:grid-cols-12 md:gap-4 md:flex-row items-center md:items-start mt-10">
+        <div class="flex flex-col md:col-start-2 md:col-span-5">
+            <div class="w-full text-center mt-[16px]"><h1 class="text-[6vw]  mx-auto md:hidden md:ml-0  static  text-[#EDF2F4]">Gamdias Aphrodite ML1</h1></div>
+            <div class="w-[70vw] md:w-full md:ml-0 flex items-center md:h-[400px] h-[70vw] mt-[30px] md:mt-[70px]  bg-[#EEEEEE]">
+                <img id="img-prancipal" class="object-contain h-full w-full" src="" alt="no pic">
+            </div>
+            <div class="flex md:grid md:grid-cols-5 md:gap-4 flex-row mt-[20px] md:mt-[29px]">
+                    <div class="bg-[#EEE] h-[21vw] w-[21vw] cursor-pointer md:h-full md:w-full md:ml-0 md:col-start-2"><button><img id="img-1" src="" alt=""></button></div>
+                   <div class="bg-[#EEE] h-[21vw] w-[21vw] cursor-pointer ml-[3.5vw] md:h-full md:w-full md:ml-0 md:col-start-3"><button><img id="img-2" src="" alt=""></button></div>
+                    <div class="bg-[#EEE] h-[21vw] w-[21vw] cursor-pointer ml-[3.5vw] md:h-full md:w-full md:ml-0 md:col-start-4"><button><img id="img-3" src=""></button></div>
+            </div>
+        </div>
+        <div class="flex md:items-start md:col-start-8 md:col-span-4 items-center flex-col mt-[10px] md:mt-[70px] md:ml-0">
+            <h1 id="titre" class="text-[32px] max-md:hidden static  w-auto h-auto text-[#EDF2F4] sm:text-[2.5vw]">Gamdias Aphrodite ML1</h1>
+            <div class="flex flex-row md:flex-col">
+                <div id="stars" class="md:mt-5 mt-6">
+                    <img class="inline w-[4vw] h-[4vw] md:w-[2vw] md:h-[2vw]" src="https://img.icons8.com/fluency/48/star--v1.png" alt="">
+                    <img class="inline w-[4vw] h-[4vw] md:w-[2vw] md:h-[2vw]" src="https://img.icons8.com/fluency/48/star--v1.png" alt="">
+                    <img class="inline w-[4vw] h-[4vw] md:w-[2vw] md:h-[2vw]" src="https://img.icons8.com/fluency/48/star--v1.png" alt="">
+                    <img class="inline w-[4vw] h-[4vw] md:w-[2vw] md:h-[2vw]" src="https://img.icons8.com/fluency/48/star--v1.png" alt="">
+                    <img class="inline w-[4vw] h-[4vw] md:w-[2vw] md:h-[2vw]" src="https://img.icons8.com/ios-filled/50/737373/star--v1.png" alt="">
+                </div>
+                <div><p id="prix" class="w-auto h-full  md:mt-[35px] md:text-[40px] ml-20 md:ml-0 text-[6vw]  text-[#C7CAD1]">99.99$</p></div>
+            </div>
+            <!-- hna -->
+            <p id="desc" class="md:w-full w-[50vw] md:mt-[35px] line-clamp-2 h-full mt-[17px] text-[#C7CAD1]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam harum non explicabo earum Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias iure fugit vel error, reprehenderit quibusdam culpa veritatis porro repudiandae maiores!</p>
+            <div class="flex flex-row mt-[35px]" >
+            <div class="flex md:grid md:grid-cols-4 md:gap-4 items-center flex-row mt-">
+                <div class="flex flex-row md:col-span-2">
+                    <button id="moin" class="bg-black h-[9vw] w-[12vw] md:h-[48px] md:w-[50px] text-white text-2xl">-</button>
+                    <input id="contiti" type="text" value="1" class="bg-[#D9D9D9] h-[9vw] w-[12vw] md:h-[48px] text-center md:w-[50px]" >
+                    <button id="plus" class="bg-black h-[9vw] w-[12vw] md:h-[48px] md:w-[50px] text-white">+</button>
+                </div>
+                <div class="col-span-2">
+                <button class="w-[40vw] h-[10vw] md:w-full md:h-[48px] bg-[#F04D0D] ml-[17px] md:ml-[6.2vw]  rounded-[8px] text-[#EDF2F4]"><a href="/assets/pages/cart/cart.html">add to card</a></button>
+            </div>
+            </div>
+            </div>
+            <div class="w-[90vw] h-[22vw] md:w-full md:h-[14vw] border border-solid border-white mt-[24px]">
+                <div class="flex flex-row"><img class="mr-3 w-[10vw] md:mr-8 md:w-[5vw] h-[7vw] md:h-[30px] ml-2" src="https://img.icons8.com/?size=100&id=vUX3MkI7D7xW&format=png&color=000000" alt="">
+                    <div>
+                        <p class="text-[#C7CAD1] text-[12px] md:text-[2.2vw]">Free Delivery</p>
+                        <p class="text-[#C7CAD1] opacity-70 text-[10px] md:text-[1.1vw]">Enter your postal code for Delivery Availability</p>
+
+                    </div>
+                </div>
+                <hr>
+                <div class="flex flex-row" >
+                    <img class="mr-3 w-[10vw] md:w-[5vw] md:mr-7 md:h-[5vw] h-[8vw] ml-2 md:mt-[5px]" src="https://img.icons8.com/?size=100&id=121812&format=png&color=000000" alt="">
+                    <div >
+                        <p class="text-[#C7CAD1] text-[12px] md:text-[2.2vw]">Free Delivery</p>
+                        <p class="text-[#C7CAD1] opacity-70 text-[10px] md:text-[1.1vw]">Enter your postal code for Delivery Availability</p>
+
+                    </div>
+                </div>
+                
+            </div>
+          
+        </div>
+    </section>
+    <footer class="bg-black mt-7">
+        <div class="max-w-screen-xl mx-auto px-6 py-10">
+            <div class="logo my-4">
+                <a href="../../../index.html" class=" text-white font-logo text-4xl">
+
+                    Game<span class="text-red">Rig</span>
+                </a>
+            </div>
+            <div class="flex gap-10 flex-wrap mx-10 items-center text-white justify-between md:mx-20">
+                <div>
+                    <h3 class="my-2 text-orange font-semibold text-xl">short links</h3>
+                    <ul class="ml-4">
+                        <li class="hover:scale-105 hover:text-orange"><a href="">home</a></li>
+                        <li class="hover:scale-105 hover:text-orange"><a href="">products list</a></li>
+                        <li class="hover:scale-105 hover:text-orange"><a href="">about us</a></li>
+                        <li class="hover:scale-105 hover:text-orange"><a href="">contact us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="my-2 text-orange font-semibold text-xl">category</h3>
+                    <ul class="ml-4">
+                        <li class="hover:scale-105 hover:text-orange"><a href="">Gaming Chairs</a></li>
+                        <li class="hover:scale-105 hover:text-orange"><a href="">Console Gaming</a></li>
+                        <li class="hover:scale-105 hover:text-orange"><a href="">PC Gamer</a></li>
+                        <li class="hover:scale-105 hover:text-orange"><a href="">Gaming Accessories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="my-2 text-orange font-semibold text-xl">join us</h3>
+                    <ul class="ml-4">
+                        <li class="hover:scale-105 hover:text-orange"><a href="">log in</a></li>
+                        <li class="hover:scale-105 hover:text-orange"><a href="">sign in</a></li>
+                        <li class="hover:scale-x-105">
+                            <div
+                                class="relative flex items-center w-full h-10 border-2 border-x-white rounded-full  focus-within:shadow-lg bg-transparent overflow-hidden my-4">
+                                <label class="sr-only" for="footerSearchBar">search bar </label>
+                                <input placeholder="search"
+                                    class="peer h-full w-full outline-none bg-transparent text-sm text-white px-4"
+                                    type="search" name="footerSearchBar" id="footerSearchBar">
+                                <div class="grid place-items-center h-full w-12 text-gray-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                    </svg>
+                                </div>
+                            </div>
+                             
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class=" mt-10 flex justify-center items-center gap-10">
+                <div>
+                    <svg class="fill-gray-300 hover:fill-orange hover:scale-105 w-6" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path
+                            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+                    </svg>
+                    
+                </div>
+                <div>
+                    <svg class="fill-gray-300 hover:fill-orange hover:scale-105 w-6" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <path
+                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                    </svg>
+                </div>
+                <div>
+                    <svg class="fill-gray-300 hover:fill-orange hover:scale-105 w-6" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 576 512">
+                        <path
+                            d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
+                    </svg>
+                    
+                </div>
+                <div>
+                    <svg class="fill-gray-300 hover:fill-orange hover:scale-105 w-6" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <path
+                            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                    </svg>
+                  
+                </div>
+
+            </div>
+        </div>
+
+
+    </footer>
+    <script src="/assets/pages/productDetails/productDetails.js"></script>
+    <script src="./../../../main.js"></script>
+</body>
 </html>
