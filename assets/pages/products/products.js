@@ -13,6 +13,8 @@ function updateLocalStorageProducts() {
 	localStorage.setItem("products", JSON.stringify(products));
 }
 
+
+
 fetch("../../data/data.json")
 	.then((res) => res.json())
 	.then((data) => {
@@ -24,7 +26,9 @@ fetch("../../data/data.json")
 		}
 		displayProductsSlice();
 		displayPagination();
-	})
+		homeCategory();
+		footersearch();
+	}) 
 	.catch((error) => console.error(error));
 
 function displayProducts(products) {
@@ -270,7 +274,29 @@ sortInput.addEventListener("input", () => {
 	displayProductsSlice();
 	updateLocalStorageProducts();
 });
-
+function homeCategory(){
+	let url = new URL(window.location.href);
+let category = url.searchParams.get('category');
+if(category){
+	document.getElementById("filter").value=category;
+	filteredListe = products.filter((prdct) => prdct.category == category);
+	console.log(products);
+	displayProducts(filteredListe);
+    console.log(category);
+}}
+function footersearch(){
+	let url = new URL(window.location.href);
+	let searchFooter = url.searchParams.get('search');
+if(searchFooter){
+	console.log(searchFooter);
+	document.querySelector("#search").value=searchFooter;
+	const query = searchFooter.toLowerCase();
+	const searchedProducts = products.filter((product) => product.name.toLowerCase().includes(query));
+	displayProducts(searchedProducts);
+	
+    
+}
+}
 // filter
 const filterInput = document.getElementById("filter");
 
@@ -283,3 +309,4 @@ filterInput.addEventListener("input", () => {
 		displayProductsSlice();
 	}
 });
+
