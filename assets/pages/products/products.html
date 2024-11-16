@@ -21,61 +21,78 @@
 	</head>
 	<body class="main-bg">
 		<header class="fixed z-20 top-0 right-0 w-full">
-        
+
 			<nav class="bg-white h-24">
-				<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-6 py-10">
-				  <a href="#" class=" text-black font-logo text-4xl">
-					  
-					  Game<span class="text-red">Rig</span>
-				  </a>
-				  <button type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-gray-200   " aria-controls="navbar-default" aria-expanded="false">
-					  <span class="sr-only">Open main menu</span>
-					  <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-						  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-					  </svg>
-				  </button>
-				  <!-- hidden -->
-				  <div class=" hidden w-full md:block md:w-auto" id="navbar-default">
-					<ul class="font-medium flex flex-col   items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
-					  <li class=" w-full md:w-auto">
-						<a href="../../../index.html" class="block py-2 px-3 text-red  rounded  md:text-red md:font-semibold text-[1.25rem]  md:p-0  hover:scale-[1.01] md:hover:scale-110 transition-transform" aria-current="page">Home</a>
-					  </li>
-					  <li  class=" w-full md:w-auto">
-						<a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  hover:scale-[1.01] md:hover:scale-110 transition-transform md:hover:text-red md:p-0  ">Products</a>
-					  </li>
-					  <li  class=" w-full md:w-auto">
-						<a href="../../../index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  hover:scale-[1.01] md:hover:scale-110 transition-transform md:hover:text-red md:p-0  ">Contact Us</a>
-					  </li>
-					  <li  class=" w-full md:w-auto">
-						<a href="../../../index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  hover:scale-[1.01] md:hover:scale-110 transition-transform md:hover:text-red md:p-0  ">About Us</a>
-					  </li>
-					  <li class="flex justify-around w-full md:w-auto md:gap-8 md:justify-center ">
-						<a role="button" href="../assets/pages/cart/cart.html" class="hover:scale-110 transition-all">
-							<span class="sr-only">go to cart </span>
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
-								<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-							</svg>
-							  
-						</a>
+				<div class="max-w-screen-xl flex h-full flex-wrap items-center justify-between mx-auto  px-10">
+					<a href="../../../index.html" class=" text-black font-logo text-4xl">
 	
-						<a role="button" href="../assets/pages/login/login.html"  class="hover:scale-110 transition-all">
-							<span class="sr-only">login</span>
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
-								<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
-							</svg>
-						  
-							  
-						</a>
+						Game<span class="text-red">Rig</span>
+					</a>
+					<button id="burger-icon" type="button"
+						class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-rose-200 focus:outline-none focus:ring-2 focus:ring-roce-200   "
+						aria-controls="navbar-default" aria-expanded="false">
+						<span class="sr-only">Open main menu</span>
+						<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+							viewBox="0 0 17 14">
+							<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+								d="M1 1h15M1 7h15M1 13h15" />
+						</svg>
+					</button>
+					<!-- hidden -->
+					<div class=" hidden w-full md:block md:w-auto" id="navbar-default">
+						<ul
+							class="font-medium flex flex-col   items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+							<li class=" w-full md:w-auto">
+								<a href="../../../index.html"
+									class="block py-2 px-3 text-white bg-red rounded md:bg-transparent md:text-red md:font-semibold text-[1.25rem]  md:p-0  hover:scale-[1.01] md:hover:scale-110 transition-transform"
+									aria-current="page">Home</a>
+							</li>
+							<li class=" w-full md:w-auto">
+								<a href="../products/products.html"
+									class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  hover:scale-[1.01] md:hover:scale-110 transition-transform md:hover:text-red md:p-0  ">Products</a>
+							</li>
+							<li class=" w-full md:w-auto">
+								<a href="../../../index.html#contact"
+									class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  hover:scale-[1.01] md:hover:scale-110 transition-transform md:hover:text-red md:p-0  ">Contact
+									Us</a>
+							</li>
+							<li class=" w-full md:w-auto">
+								<a href="../../../index.html#about"
+									class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  hover:scale-[1.01] md:hover:scale-110 transition-transform md:hover:text-red md:p-0  ">About
+									Us</a>
+							</li>
+							<li class="flex justify-around w-full md:w-auto md:gap-8 md:justify-center ">
+								<a role="button" href="../cart/cart.html"
+									class="hover:scale-110 transition-all">
+									<span class="sr-only">go to cart </span>
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+										stroke-width="1.5" stroke="currentColor" class="size-8">
+										<path stroke-linecap="round" stroke-linejoin="round"
+											d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+									</svg>
 	
-					  </li>
-					   
-					</ul>
-				  
-				  </div>
-				  
+								</a>  
+	
+								<a role="button" href="../login/login.html"
+									class="hover:scale-110 transition-all">
+									<span class="sr-only">login</span>
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+										stroke-width="1.5" stroke="currentColor" class="size-8">
+										<path stroke-linecap="round" stroke-linejoin="round"
+											d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+									</svg>
+	
+	
+								</a>
+	 
+							</li>
+	
+						</ul>
+	
+					</div>
+	
 				</div>
 			</nav>
-	 
 		</header>
 
 		<main id="products" class="grid grid-cols-12 mt-32 mb-10">
@@ -115,7 +132,7 @@
 		<footer class="bg-black">
 			<div class="max-w-screen-xl mx-auto px-6 py-10">
 				<div class="logo my-4">
-					<a href="./index.html" class=" text-white font-logo text-4xl">
+					<a href="../../../index.html" class=" text-white font-logo text-4xl">
 	
 						Game<span class="text-red">Rig</span>
 					</a>
