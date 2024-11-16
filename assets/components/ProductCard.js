@@ -16,7 +16,7 @@ export default function (product) {
 					</div>
 					<button
                   data-id="${product?.id}" onclick="addProductToCart(event)"
-						class="add-to-cart-btn text-sm bg-[#F04D0D] text-white font-medium w-full p-2 hover:scale-105 hover:bg-[rgba(240,77,13,0.8)] transition-all duration-300">
+						class="add-to-cart-btn text-sm bg-[#F04D0D] text-white font-medium w-full p-2 hover:scale-105 active:scale-100 hover:bg-[rgba(240,77,13,0.8)] transition-colors duration-300">
 						add to cart <i class="fa-solid fa-cart-plus"></i>
 					</button>
 					<h2 class="product-name text-white text-sm hover:underline">${product.name}</h2>
