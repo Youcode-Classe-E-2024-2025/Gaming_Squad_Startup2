@@ -5,7 +5,7 @@
 		"description": "High-performance gaming PC with RTX 3080",
 
 		"imgSrc": ["../../images/products/pc-1-removebg-preview.png","../../images/products/pc-1-1-removebg-preview.png","../../images/products/pc-1-2-removebg-preview.png"],
-		"rating": 5,
+		"rating": 4,
 		"price": 1500,
 		"category": "PC Gamer",
 		"stock": 10
@@ -16,7 +16,7 @@
 		"description": "Premium gaming PC with AMD Ryzen 9",
 
 		"imgSrc": ["../../images/products/pc-2-removebg-preview.png","../../images/products/pc-2-1-removebg-preview.png","../../images/products/pc-2-2-removebg-preview.png"],
-		"rating": 5,
+		"rating": 4,
 		"price": 1800,
 		"category": "PC Gamer",
 		"stock": 180
@@ -37,7 +37,7 @@
 		"description": "Asus ROG Strix PC with Intel i9",
 
 		"imgSrc": ["../../images/products/pc-4-removebg-preview.png","../../images/products/pc-4-1-removebg-preview.png","../../images/products/pc-4-2-removebg-preview.png"],
-		"rating": 5,
+		"rating": 4,
 		"price": 1600,
 		"category": "PC Gamer",
 		"stock": 290
@@ -77,18 +77,27 @@
 		"name": "Corsair One Gaming PC",
 		"description": "Compact PC with liquid cooling",
 		"imgSrc":  ["../../images/products/pc-8-removebg-preview.png","../../images/products/pc-8-1-removebg-preview.png","../../images/products/pc-8-2-removebg-preview.png"],
-		"rating": 5,
+		"rating": 4,
 		"price": 2000,
 		"category": "PC Gamer",
 		"stock": 333
 	},
-
+	{
+		"id": 19,
+		"name": "Nintendo Switch Pro Controller",
+		"description": "Wireless headset with 3D audio",
+		"imgSrc":  ["../../images/products/mnanette-3-removebg-preview.png","../../images/products/manette-3-1-removebg-preview.png","../../images/products/manette-3-2-removebg-preview.png"],
+		"rating": 5,
+		"price": 100,
+		"category": "Playstations",
+		"stock": 635
+	},
 	{
 		"id": 9,
 		"name": "Logitech G502 Mouse",
 		"description": "Gaming mouse with HERO sensor",
 		"imgSrc":  ["../../images/products/souris-1-removebg-preview.png","../../images/products/souris-1-1-removebg-preview.png","../../images/products/souris-1-2-removebg-preview.png"],
-		"rating": 5,
+		"rating": 4,
 		"price": 60,
 		"category": "Accessories",
 		"stock": 777
@@ -183,16 +192,6 @@
 		"price": 70,
 		"category": "Playstations",
 		"stock": 439
-	},
-	{
-		"id": 19,
-		"name": "Nintendo Switch Pro Controller",
-		"description": "Wireless headset with 3D audio",
-		"imgSrc":  ["../../images/products/mnanette-3-removebg-preview.png","../../images/products/manette-3-1-removebg-preview.png","../../images/products/manette-3-2-removebg-preview.png"],
-		"rating": 4,
-		"price": 100,
-		"category": "Playstations",
-		"stock": 635
 	},
 	{
 		"id": 20,
