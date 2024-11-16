@@ -168,7 +168,8 @@ window.openProductDetails = function (event) {
 	const location = window.location;
 	const query = new URLSearchParams(location.search);
 	query.set("id", id);
-	const href = `${location.origin}/assets/pages/productDetails/productDetails.html?${query.toString()}`;
+	// const href = `${location.origin}/assets/pages/productDetails/productDetails.html?${query.toString()}`;
+	const href = `${baseUrl}/productDetails.html?${query.toString()}`;
 	window.location.href = href;
 };
 
