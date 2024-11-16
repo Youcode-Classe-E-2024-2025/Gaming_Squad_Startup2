@@ -155,7 +155,7 @@ window.categoryHandler = function (event) {
 	const location = window.location;
 	const query = new URLSearchParams(location.search);
     query.set("category", id);
-	const href = `${location.origin}/assets/pages/products/products.html?${query.toString()}`;
+	const href = `${location.origin}/Gaming_Squad_Startup2/assets/pages/products/products.html?${query.toString()}`;
 	window.location.href = href;
 };
 // footer search
@@ -165,6 +165,8 @@ window.searchHandler = function (event) {
 	const location = window.location;
 	const query = new URLSearchParams(location.search);
     query.set("search", searchValue);
-	const href = `${location.origin}/assets/pages/products/products.html?${query.toString()}`;
+    // "/Gaming_Squad_Startup2/assets/pages/products/products.html"
+
+	const href = `${location.origin}/Gaming_Squad_Startup2/assets/pages/products/products.html?${query.toString()}`;
 	window.location.href = href;
 };
