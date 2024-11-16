@@ -11,9 +11,9 @@ export function CartItem(product) {
                         <p class="absolute right-3 md:right-10 text-[18px] max-sm:text-[20px] md:text-[24px] ">$${product.price}</p>
                     </div>
                     <div class="absolute right-0 bottom-10 flex flex-row md:col-span-2 mt-3 mr-3 my-auto">
-                        <button data-id="${product.id}" onclick="decrementQuantity(event, ${product.id})" class="minus bg-white border-solid border-black border md:h-[40px] h-[20px] w-[20px] md:w-[40px] flex items-center text-black md:text-2xl ml-[7px]">-</button>
+                        <button data-id="${product.id}" onclick="decrementQuantity(event, ${product.id})" class="minus bg-white border-solid border-black border md:h-[40px] h-[20px] w-[20px] md:w-[40px] flex justify-center items-center text-black md:text-2xl ml-[7px]">-</button>
                         <button class="quantity bg-white md:h-[40px] h-[20px] w-[20px] md:w-[40px] border-solid border-black border">${product.quantity}</button>
-                        <button data-id="${product.id}" onclick="incrementQuantity(event, ${product.id})" class="plus bg-white md:h-[40px] h-[20px] w-[20px] md:w-[40px] flex items-center  text-black border-solid border-black border ml-[4px]">+</button>
+                        <button data-id="${product.id}" onclick="incrementQuantity(event, ${product.id})" class="plus bg-white md:h-[40px] h-[20px] w-[20px] md:w-[40px] flex justify-center items-center  text-black border-solid border-black border ml-[4px]">+</button>
                     </div>
                     
                     <div class="cursor-pointer" onclick="removeFromCart(event, ${product.id})">
