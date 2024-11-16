@@ -6,7 +6,7 @@ const wlcmTitle = document.querySelector('section#welcome #wlcm-title');
 const wlcmSousTitle = document.querySelector('section#welcome #wlcm-sous-title');
 const wlcmImg = document.querySelector('section#welcome #wlcm-img');
 const wlcmContent = document.querySelector('section#welcome #wlcm-content');
-
+let products=[]
 console.log(welcomeSection);
 const wlcmData =[
     {
@@ -78,6 +78,7 @@ fetch("./assets/data/data.json")
             localStorage.setItem("products", JSON.stringify(products));
 
 		}
+        bestProductHandler();
 	
 	})
 	.catch((error) => console.error(error));
@@ -117,12 +118,12 @@ const leftBnt =document.getElementById('left-carousel-btn');
 const rightBnt =document.getElementById('right-carousel-btn');
 const carouselContent=document.getElementById('carousel-content');
 const carouselContainer=document.getElementById('carousel-container');
-const item=document.querySelector('.cartCarousel');
 
-console.log(' parent has child',carouselContainer.clientWidth);
+
+// console.log(' parent has child',carouselContainer.clientWidth);
 // console.log(' child has item',carouselContent.clientWidth,"e",item.clientWidth*6+128*5, "rr",(item.clientWidth*6+128*5)/2 -128/2);
 // console.log('  item',item.clientWidth);
-console.log(Number.parseFloat(getComputedStyle(carouselContainer).width));
+// console.log(Number.parseFloat(getComputedStyle(item).width));
 
 // const gap= (carouselContainer.clientWidth-(item.clientWidth*3))/2 
 // console.log('sssssss', window.clientWidth);
@@ -131,21 +132,10 @@ console.log(Number.parseFloat(getComputedStyle(carouselContainer).width));
 // // console.log('needed width',item.clientWidth*3+128*2);
 // console.log(scrollWidth);
 
-const wlcmScroll = (op)=>{
-    const gap= (carouselContainer.clientWidth-(item.clientWidth*3))/2 
- 
-    const scrollWidth= item.clientWidth+gap;
 
-    carouselContainer.scrollBy({ left: (scrollWidth*op), behavior: 'smooth' })
-}
 
-leftBnt.addEventListener('click',()=>{ wlcmScroll(-1)})
-rightBnt.addEventListener('click',()=>{ wlcmScroll(1)})
 
-// Get the carousel buttons and the carousel content container
-const leftBtn = document.getElementById("left-carousel-btn");
-const rightBtn = document.getElementById("right-carousel-btn");
-// const carouselContent = document.getElementById("carousel-content");
+
 
 
 // categoryHandler
@@ -170,3 +160,45 @@ window.searchHandler = function (event) {
 	const href = `${location.origin}/assets/pages/products/products.html?${query.toString()}`;
 	window.location.href = href;
 };
+function createBestProductCart(prdct){
+    const src= prdct.imgSrc[0].split('/');
+    // console.log(src);
+    let img=`./assets/${src[2]}/${src[3]}/${src[4]}`
+    const cart =document.createElement('div');
+    cart.className=" cartCarousel  h-[19.5rem] w-52 bg-[#4E6896] hover:bg-[#3E5377] rounded-lg rounded-b-3xl  text-white flex flex-col items-center justify-between overflow-hidden"
+    cart.innerHTML=`
+       <div class=" text-center flex flex-col h-full items-center justify-between p-1">
+          <div class=" h-52 w-full">
+              <img src="${img}"
+                  alt=" image of ${prdct.name} " class=" object-cover h-full w-full rounded ">
+          </div>
+          <p>${prdct.name}</p>
+          <p class=" w-24 rounded-full  bg-[#ffffff10] mx-auto">${prdct.price}$</p>
+       </div>
+       <button  data-id="${prdct.id}" onclick="addProductToCart(event)" class="bg-[#2B2D42] h-8 w-full">add</button>
+    `
+    carouselContent.append(cart);
+}
+//  bestProductHandler
+function bestProductHandler(){
+        const liste = products.filter(prdct=> prdct.rating == 5);
+        carouselContent.innerHTML="";
+        liste.forEach(prdct=>createBestProductCart(prdct));
+
+        const wlcmScroll = (op)=>{
+            const item=document.querySelector('.cartCarousel');
+        
+            const gap= (carouselContainer.clientWidth-(item.clientWidth*3))/2 
+         
+            const scrollWidth= item.clientWidth+gap;
+        
+            carouselContainer.scrollBy({ left: (scrollWidth*op), behavior: 'smooth' })
+        }
+        
+        leftBnt.addEventListener('click',()=>{ wlcmScroll(-1)})
+        rightBnt.addEventListener('click',()=>{ wlcmScroll(1)})
+} 
+
+// copy product.js
+
+

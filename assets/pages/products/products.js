@@ -3,7 +3,7 @@ import Overlay from "../../components/Overlay.js";
 import EditForm from "../../components/EditForm.js";
 import AddForm from "../../components/AddForm.js";
 
-let products = [];
+// let products = [];
 let filteredListe = [];
 const productsWrapper = document.querySelector(".products-wrapper");
 // select main element to add in it AddForm component
