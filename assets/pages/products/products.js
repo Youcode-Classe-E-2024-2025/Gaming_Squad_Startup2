@@ -166,6 +166,7 @@ window.addProductToCart = function (event) {
 window.openProductDetails = function (event) {
 	const id = event.currentTarget.id;
 	const location = window.location;
+	const baseUrl = "https://www.example.com/products"; 
 	const query = new URLSearchParams(location.search);
 	query.set("id", id);
 	// const href = `${location.origin}/assets/pages/productDetails/productDetails.html?${query.toString()}`;
