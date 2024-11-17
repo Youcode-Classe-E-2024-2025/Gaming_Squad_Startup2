@@ -10,6 +10,30 @@
         rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
+<style>
+     .pdf-content {
+            width: 210mm; /* Format A4 */
+            margin: 0 auto;
+        }
+
+        table {
+            page-break-inside: auto;
+        }
+
+        tr {
+            page-break-inside: avoid;
+            page-break-after: auto;
+        }
+
+        td,
+        th {
+            word-wrap: break-word;
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+</style>
 
 <body class="bg-gray-100">
     <div class="min-h-screen flex flex-col items-center">
@@ -125,7 +149,9 @@
                 html2canvas: {
                     scale: 2,
                     useCORS: true,
-                    letterRendering: true
+                    letterRendering: true,
+                    scrollX: 0,
+                    scrollY: 0
                 },
                 jsPDF: {
                     unit: 'pt',
