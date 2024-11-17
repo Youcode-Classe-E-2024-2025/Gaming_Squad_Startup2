@@ -77,4 +77,68 @@
             </button>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function formatPrice(price) {
+                return `$ ${price.toLocaleString()}`;
+            }
+
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const tableBody = document.getElementById("tableBody");
+
+            let subtotal = 0;
+
+            cart.forEach(item => {
+                const row = document.createElement('tr');
+                const itemTotal = item.price * item.quantity;
+                subtotal += itemTotal;
+
+                row.innerHTML = `
+                    <td class="py-4 px-4">${item.name}</td>
+                    <td class="py-4 px-4 text-right">${item.quantity}</td>
+                    <td class="py-4 px-4 text-right">${formatPrice(item.price)}</td>
+                    <td class="py-4 px-4 text-right">${formatPrice(itemTotal)}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+
+            const tax = subtotal * 0.08;
+            const total = subtotal + tax;
+
+            document.getElementById('subtotalAmount').textContent = formatPrice(subtotal);
+            document.getElementById('taxAmount').textContent = formatPrice(tax);
+            document.getElementById('totalAmount').textContent = formatPrice(total);
+
+            document.getElementById('quotation-date').textContent = new Date().toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        });
+
+        function downloadQuotation() {
+            const element = document.getElementById('quotationContent');
+
+            const opt = {
+                filename: 'GameRig-quotation.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: {
+                    scale: 2,
+                    useCORS: true,
+                    letterRendering: true
+                },
+                jsPDF: {
+                    unit: 'pt',
+                    format: 'a4',
+                    orientation: 'portrait'
+                }
+            };
+
+            html2pdf().from(element).set(opt).save();
+        }
+    </script>
+</body>
+
+</html>
+
 
