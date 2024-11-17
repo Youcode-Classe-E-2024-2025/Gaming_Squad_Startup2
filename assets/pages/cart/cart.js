@@ -2,6 +2,7 @@ import { CartItem } from "../../components/CartItem.js";
 const cartContainer = document.querySelector(".cart-container");
 const cart = JSON.parse(localStorage.getItem("cart"));
 
+
 function updateLocalStorageCart() {
 	localStorage.setItem("cart", JSON.stringify(cart));
 }
@@ -21,6 +22,14 @@ function displayCart() {
 }
 displayCart();
 
+
+document.querySelector('.pay-btn').addEventListener('click', function () {
+   
+
+    const href = "../../../devis.html";
+    window.location.href = href;
+	
+});
 window.incrementQuantity = function (event, id) {
 	const index = cart.findIndex((product) => product.id == id);
 	const product = cart[index];
@@ -50,3 +59,4 @@ window.removeFromCart = function (event, id) {
 	displayCart();
 	console.log(index);
 };
+
