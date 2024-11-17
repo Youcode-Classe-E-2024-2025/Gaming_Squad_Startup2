@@ -36,6 +36,7 @@ const wlcmData =[
 ]
 
 // menu toggle
+
 burgerIcon.addEventListener('click',()=> {navbar.classList.toggle('hidden')});
 
 
@@ -199,7 +200,7 @@ function bestProductHandler(){
         rightBnt.addEventListener('click',()=>{ wlcmScroll(1)})
 } 
 
-// copy product.js
+
 function updateCartNum() {
     const cart = JSON.parse(localStorage.getItem("cart"));
     document.querySelector("#cartNum").textContent = cart?.length || 0;
