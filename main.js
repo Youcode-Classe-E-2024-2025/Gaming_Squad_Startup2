@@ -200,5 +200,10 @@ function bestProductHandler(){
 } 
 
 // copy product.js
-
+function updateCartNum() {
+    const cart = JSON.parse(localStorage.getItem("cart"));
+    document.querySelector("#cartNum").textContent = cart?.length || 0;
+}
+updateCartNum();
+setInterval(updateCartNum, 1000);
 
