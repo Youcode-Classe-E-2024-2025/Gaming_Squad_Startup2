@@ -27,7 +27,6 @@ signUpForm.addEventListener("submit", (e) => {
 	if (newUserName && newPassword) {
 		localStorage.setItem("Username", newUserName);
 		localStorage.setItem("Password", newPassword);
-		alert("Inscription réussie ! Vous pouvez maintenant vous connecter.");
 		signUpForm.reset();
 	}
 });
@@ -45,7 +44,7 @@ loginForm.addEventListener("submit", (e) => {
 		localStorage.setItem("isAdmin", "true");
 		window.location.pathname = "/assets/pages/products/products.html";
 	} else {
-		alert("Nom d'utilisateur ou mot de passe incorrect");
+		alert("mot de pass in correct");
 	}
 });
 inputs.forEach((input) => {
@@ -69,4 +68,34 @@ inputs.forEach((input) => {
 		label.style.top = "0";
 		label.style.color = "#EF230C";
 	}
+});
+
+
+// faire regix for form
+const usernameRegex = /^[a-zA-Z]{5,16}$/;
+const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!$@#^%&*])[A-Za-z\d!$@#^%&*]{8,}$/;
+document.getElementById('signUpForm').addEventListener('submit', function (e) {
+	e.preventDefault();
+
+	const username = document.getElementById('newUserName').value;
+	const email = document.getElementById('Email').value;
+	const password = document.getElementById('newPassword').value;
+
+	if (!usernameRegex.test(username)) {
+		alert("Nom d'utilisateur invalide. Il doit contenir entre 5 et 16 lettres.");
+		return;
+	}
+
+	if (!emailRegex.test(email)) {
+		alert("Email invalide.");
+		return;
+	}
+
+	if (!passwordRegex.test(password)) {
+		alert("Mot de passe invalide. Il doit contenir au moins 8 caractères, une majuscule, une minuscule, un chiffre et un caractère spécial.");
+		return;
+	}
+
+	this.submit();
 });
